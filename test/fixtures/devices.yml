@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  imei_number: 1
+  device_version: one
+  device_type: MyString
+  device_color: MyString
+  device_notes: MyString
+  repair_order: one
+
+two:
+  imei_number: 1
+  device_version: two
+  device_type: MyString
+  device_color: MyString
+  device_notes: MyString
+  repair_order: two
