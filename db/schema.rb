@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180720040052) do
+ActiveRecord::Schema.define(version: 20180721175840) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,7 +61,6 @@ ActiveRecord::Schema.define(version: 20180720040052) do
   end
 
   create_table "devices", force: :cascade do |t|
-    t.integer "imei_number"
     t.bigint "device_version_id"
     t.string "device_type"
     t.string "device_color"
@@ -69,6 +68,7 @@ ActiveRecord::Schema.define(version: 20180720040052) do
     t.bigint "repair_order_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "imei_number"
     t.index ["device_version_id"], name: "index_devices_on_device_version_id"
     t.index ["repair_order_id"], name: "index_devices_on_repair_order_id"
   end

@@ -11,56 +11,47 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :customer_fname %>
-    <%= form.text_field :customer_fname, id: :customer_customer_fname %>
-  </div>
 
-  <div class="field">
-    <%= form.label :customer_lname %>
-    <%= form.text_field :customer_lname, id: :customer_customer_lname %>
-  </div>
 
-  <div class="field">
-    <%= form.label :customer_email %>
-    <%= form.text_field :customer_email, id: :customer_customer_email %>
-  </div>
+      <div class="field">
+        <%= form.label :customer_fname %>
+        <%= form.text_field :customer_fname, id: :customer_customer_fname %>
+      </div>
 
-  <div class="field">
-    <%= form.label :customer_phone %>
-    <%= form.text_field :customer_phone, id: :customer_customer_phone %>
-  </div>
+      <div class="field">
+        <%= form.label :customer_lname %>
+        <%= form.text_field :customer_lname, id: :customer_customer_lname %>
+      </div>
 
-  <div class="field">
-    <%= form.label :customer_call %>
-    <%= form.check_box :customer_call, id: :customer_customer_call %>
-  </div>
+      <div class="field">
+        <%= form.label :customer_email %>
+        <%= form.text_field :customer_email, id: :customer_customer_email %>
+      </div>
 
-  <div class="field">
-    <%= form.label :customer_text %>
-    <%= form.check_box :customer_text, id: :customer_customer_text %>
-  </div>
+      <div class="field">
+        <%= form.label :customer_phone %>
+        <%= form.text_field :customer_phone, id: :customer_customer_phone %>
+      </div>
 
-  <div class="field">
-    <%= form.label :customer_zip %>
-    <%= form.text_field :customer_zip, id: :customer_customer_zip %>
-  </div>
+      <div class="field">
+        <%= form.label :customer_call %>
+        <%= form.check_box :customer_call, id: :customer_customer_call %>
+      </div>
 
-  <table class='table'>
-    <thead>
-    <tr>
-      <th></th>
-      <th></th>
+      <div class="field">
+        <%= form.label :customer_text %>
+        <%= form.check_box :customer_text, id: :customer_customer_text %>
+      </div>
 
-    </tr>
-    </thead>
-    <tbody class="fields" >
-    <%= form.fields_for :repair_orders do |builder| %>
-        <%= render 'repair_order', form: builder %>
+      <div class="field">
+        <%= form.label :customer_zip %>
+        <%= form.text_field :customer_zip, id: :customer_customer_zip %>
+      </div>
 
-    <% end %>
-    </tbody>
-  </table>
+        <%= form.fields_for :repair_orders do |builder| %>
+            <%= render 'repair_order', form: builder %>
+        <% end %>
+
 
   <div class="actions">
     <%= form.submit %>
