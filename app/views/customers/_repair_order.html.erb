@@ -1,46 +1,61 @@
-<div class="field">
-  <%= form.label :repair_order_status_id %>
-  <%= form.collection_select :repair_order_status_id, RepairOrderStatus.all, :id, :repair_order_status %>
-</div>
+<table>
+  <tr>
+    <td>
+      <div class="field">
+        <%= form.label :repair_order_status_id %>
+        <%= form.collection_select :repair_order_status_id, RepairOrderStatus.all, :id, :repair_order_status %>
+      </div>
+    </td>
+    <td>
+      <div class="field">
+        <%= form.label :repair_order_date %>
+        <%= form.date_select :repair_order_date, id: :repair_order_repair_order_date %>
+      </div>
+    </td>
+    <td>
+      <div class="field">
+        <%= form.label :repair_order_subtotal %>
+        <%= form.text_field :repair_order_subtotal, id: :repair_order_repair_order_subtotal %>
+      </div>
+    </td>
+    <td>
+      <div class="field">
+        <%= form.label :repair_order_tax %>
+        <%= form.text_field :repair_order_tax, id: :repair_order_repair_order_tax %>
+      </div>
+    </td>
+    <td>
+      <div class="field">
+        <%= form.label :repair_order_total %>
+        <%= form.text_field :repair_order_total, id: :repair_order_repair_order_total %>
+      </div>
+    </td>
+    <td>
+      <div class="field">
+        <%= form.label :repair_order_accessories %>
+        <%= form.text_field :repair_order_accessories, id: :repair_order_repair_order_accessories %>
+      </div>
+    </td>
+    <td>
+      <div class="field">
+        <%= form.label :repair_order_notes %>
+        <%= form.text_field :repair_order_notes, id: :repair_order_repair_order_notes %>
+      </div>
+    </td>
+    <td>
+      <div class="field">
+        <%= form.label :repair_order_status_date %>
+        <%= form.date_select :repair_order_status_date, id: :repair_order_repair_order_status_date %>
+      </div>
+    </td>
+  </tr>
+</table>
 
-<div class="field">
-  <%= form.label :repair_order_date %>
-  <%= form.date_select :repair_order_date, id: :repair_order_repair_order_date %>
-</div>
 
-<div class="field">
-  <%= form.label :repair_order_subtotal %>
-  <%= form.text_field :repair_order_subtotal, id: :repair_order_repair_order_subtotal %>
-</div>
-
-<div class="field">
-  <%= form.label :repair_order_tax %>
-  <%= form.text_field :repair_order_tax, id: :repair_order_repair_order_tax %>
-</div>
-
-<div class="field">
-  <%= form.label :repair_order_total %>
-  <%= form.text_field :repair_order_total, id: :repair_order_repair_order_total %>
-</div>
-
-<div class="field">
-  <%= form.label :repair_order_accessories %>
-  <%= form.text_field :repair_order_accessories, id: :repair_order_repair_order_accessories %>
-</div>
-
-<div class="field">
-  <%= form.label :repair_order_notes %>
-  <%= form.text_field :repair_order_notes, id: :repair_order_repair_order_notes %>
-</div>
-
-<div class="field">
-  <%= form.label :repair_order_status_date %>
-  <%= form.date_select :repair_order_status_date, id: :repair_order_repair_order_status_date %>
-</div>
-
-<%= link_to_add_row('Add Device', form, :devices, class: 'btn btn-primary') %>
-
-<%= form.fields_for :devices do |builder| %>
+  <%= form.fields_for :devices do |builder| %>
     <%= render 'device', form: builder %>
-<% end %>
+  <% end %>
+  <%= link_to_add_row('Add Device', form, :devices, class: 'btn btn-primary') %>
+
+
 
