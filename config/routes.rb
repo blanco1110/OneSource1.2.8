@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'repair_order_report', to: 'repair_order_report#index'
+  post 'repair_order_report', to: 'repair_order_report#index'
+
   resources :repair_order_items
   resources :devices
   resources :repair_orders
