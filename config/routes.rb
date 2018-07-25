@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+  root 'dashboard#index', as: 'dashboard_index'
   get 'repair_order_report', to: 'repair_order_report#index'
   post 'repair_order_report', to: 'repair_order_report#index'
 
