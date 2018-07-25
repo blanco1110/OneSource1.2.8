@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <%= csrf_meta_tags %>
   <!-- Required meta tags -->
   <meta charset="utf-8">
+  <title>Baytown iPhone Repair</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!---- bootstrap css--->
+  <!---- bootstrap css. online version--->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 </head>
-
-
-<nav class="navbar navbar-expand-lg">
+<header>
+<!--navigation bar for entire application-->
+<nav class="navbar navbar-expand-sm">
   <div class="container">
     <!-- text to right-->
     <!-- logo image-->
@@ -25,6 +26,7 @@
     <ul class="navbar-nav" style="font-size: large">
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <%= image_tag("https://i.imgur.com/TWyBYp3.png", size: "32x32") %>
           Reports
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -36,18 +38,22 @@
 
       </li><li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Phones <span class="glyphicon glyphicon-phone"></span>
+        <%= image_tag("https://imgur.com/IUWYG9x.png", size: "32x32") %> Phones
       </a>
       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
         <a class="dropdown-item" href="/devices">Devices</a>
         <a class="dropdown-item" href="/device_manufacturers">Manufacturers</a>
         <a class="dropdown-item" href="/device_components">Components</a>
         <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#">Something else here</a>
+        <a class="dropdown-item" href="/customers">
+          Customers
+          <%= image_tag("https://i.imgur.com/PMFmPte.png", size: "16x16") %>
+        </a>
       </div>
     </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <%= image_tag("https://i.imgur.com/kMB3t8E.png", size: "32x32") %>
           Admin
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -60,22 +66,15 @@
       </li>
     </ul>
   </div>
-  </div>
 </nav>
-
+</header>
+<!--other pages-->
 <body>
-
-<div id="main-container" class="container">
-  <div class="row">
-    <div class="col-xs-9">
       <%= yield %>
-    </div>
-  </div>
-</div>
+</body>
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
 
-</body>
 </html>
