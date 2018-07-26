@@ -1,9 +1,8 @@
 <p id="notice"><%= notice %></p>
-<div class="container">
+
 <h1>Repair Order Items</h1>
 
-<div class="table-responsive">
-  <table class="table table-hover">
+<table>
   <thead>
     <tr>
       <th>Device component</th>
@@ -26,7 +25,7 @@
         <td><%= repair_order_item.warranty_coverage_notes %></td>
         <td><%= repair_order_item.repaired_as_warranty %></td>
         <td><%= repair_order_item.warranty_repair_date %></td>
-        <td><%= repair_order_item.device %></td>
+        <td><%= repair_order_item.device.imei_number %></td>
         <td><%= link_to 'Show', repair_order_item %></td>
         <td><%= link_to 'Edit', edit_repair_order_item_path(repair_order_item) %></td>
         <td><%= link_to 'Destroy', repair_order_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -37,6 +36,4 @@
 
 <br>
 
-</div>
 <%= link_to 'New Repair Order Item', new_repair_order_item_path %>
-</div>
