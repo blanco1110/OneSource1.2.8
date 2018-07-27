@@ -1,0 +1,35 @@
+<h1>Open Orders Report </h1>
+
+<%= render 'open_order_report/count_open_orders' %>
+
+<br>
+<br>
+
+<table>
+  <thead>
+  <tr>
+    <th>Status</th>
+    <th>Status Date</th>
+    <th>Order Date</th>
+    <th>Customer First Name</th>
+    <th>Customer Last Name</th>
+    <th>Order Notes</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @repair_orders.each do |repair_order| %>
+      <tr>
+        <td><%= repair_order.repair_order_status.repair_order_status %></td>
+        <td><%= repair_order.repair_order_status_date %></td>
+        <td><%= repair_order.repair_order_date %></td>
+        <td><%= repair_order.customer.customer_fname %></td>
+        <td><%= repair_order.customer.customer_lname %></td>
+        <td><%= repair_order.repair_order_notes %></td>
+
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
