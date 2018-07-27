@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
 
-  root 'dashboard#index', as: 'dashboard_index'
   get 'repair_order_report', to: 'repair_order_report#index'
   post 'repair_order_report', to: 'repair_order_report#index'
+  get 'warranty_report', to: 'warranty_report#index'
+  post 'warranty_report', to: 'warranty_report#index'
+  get 'open_order_report', to: 'open_order_report#index'
+  post 'open_order_report', to: 'open_order_report#index'
+
 
   resources :repair_order_items
   resources :devices
