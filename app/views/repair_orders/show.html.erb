@@ -12,17 +12,17 @@
 
 <p>
   <strong>Repair order subtotal:</strong>
-  <%= @repair_order.repair_order_subtotal %>
+  <%= number_to_currency(@repair_order.repair_order_subtotal) %>
 </p>
 
 <p>
   <strong>Repair order tax:</strong>
-  <%= @repair_order.repair_order_tax %>
+  <%= number_to_currency(@repair_order.repair_order_tax) %>
 </p>
 
 <p>
   <strong>Repair order total:</strong>
-  <%= @repair_order.repair_order_total %>
+  <%= number_to_currency(@repair_order.repair_order_total) %>
 </p>
 
 <p>
@@ -33,11 +33,6 @@
 <p>
   <strong>Repair order notes:</strong>
   <%= @repair_order.repair_order_notes %>
-</p>
-
-<p>
-  <strong>Customer:</strong>
-  <%= @repair_order.customer %>
 </p>
 
 <p>

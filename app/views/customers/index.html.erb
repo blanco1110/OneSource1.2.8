@@ -22,7 +22,7 @@
         <td><%= customer.customer_fname %></td>
         <td><%= customer.customer_lname %></td>
         <td><%= customer.customer_email %></td>
-        <td><%= customer.customer_phone %></td>
+        <td><%= number_to_phone(customer.customer_phone) %></td>
         <td><%= customer.customer_call %></td>
         <td><%= customer.customer_text %></td>
         <td><%= customer.customer_zip %></td>

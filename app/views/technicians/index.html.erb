@@ -16,11 +16,11 @@
     <% @technicians.each do |technician| %>
       <tr>
         <td><%= technician.tech_name %></td>
-        <td><%= technician.technician_status %></td>
+        <td><%= technician.technician_status.tech_status %></td>
         <td><%= technician.tech_expertise_notes %></td>
         <td><%= link_to 'Show', technician %></td>
         <td><%= link_to 'Edit', edit_technician_path(technician) %></td>
-        <td><%= link_to 'Destroy', technician, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', technician, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

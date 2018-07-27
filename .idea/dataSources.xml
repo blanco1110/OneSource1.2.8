@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="Rails OneSourcePrototype1.2.8: test" uuid="2da98b13-2e29-424d-aa35-95384bc44e48">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/OneSourcePrototype1_2_8_test</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails OneSourcePrototype1.2.8: production" uuid="d467daff-4d44-4ef0-ae10-94cfa1cb6cb1">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/OneSourcePrototype1_2_8_production</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="baytownIphoneRepair" uuid="157d9457-b259-4b61-b2b4-2ea0a7b7f4b2">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/OneSourcePrototype1_2_8_development</jdbc-url>
+    </data-source>
+  </component>
+</project>

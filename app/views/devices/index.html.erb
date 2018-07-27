@@ -19,11 +19,11 @@
     <% @devices.each do |device| %>
       <tr>
         <td><%= device.imei_number %></td>
-        <td><%= device.device_version %></td>
+        <td><%= device.device_version.device_version_name %></td>
         <td><%= device.device_type %></td>
         <td><%= device.device_color %></td>
         <td><%= device.device_notes %></td>
-        <td><%= device.repair_order %></td>
+        <td><%= device.repair_order.repair_order_status_id %></td>
         <td><%= link_to 'Show', device %></td>
         <td><%= link_to 'Edit', edit_device_path(device) %></td>
         <td><%= link_to 'Destroy', device, method: :delete, data: { confirm: 'Are you sure?' } %></td>
