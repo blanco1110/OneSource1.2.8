@@ -12,47 +12,47 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :repair_order_status_id %>
+    <%= form.label :repair_order_status_id, "Status" %>
     <%= form.collection_select :repair_order_status_id, RepairOrderStatus.all, :id, :repair_order_status %>
   </div>
 
   <div class="field">
-    <%= form.label :repair_order_date %>
+    <%= form.label :repair_order_date, "Date" %>
     <%= form.date_select :repair_order_date, id: :repair_order_repair_order_date %>
   </div>
 
   <div class="field">
-    <%= form.label :repair_order_subtotal %>
+    <%= form.label :repair_order_subtotal, "Subtotal" %>
     <%= form.text_field :repair_order_subtotal, id: :repair_order_repair_order_subtotal %>
   </div>
 
   <div class="field">
-    <%= form.label :repair_order_tax %>
+    <%= form.label :repair_order_tax, "Tax" %>
     <%= form.text_field :repair_order_tax, id: :repair_order_repair_order_tax %>
   </div>
 
   <div class="field">
-    <%= form.label :repair_order_total %>
+    <%= form.label :repair_order_total, "Total" %>
     <%= form.text_field :repair_order_total, id: :repair_order_repair_order_total %>
   </div>
 
   <div class="field">
-    <%= form.label :repair_order_accessories %>
+    <%= form.label :repair_order_accessories, 'Accesories' %>
     <%= form.text_field :repair_order_accessories, id: :repair_order_repair_order_accessories %>
   </div>
 
   <div class="field">
-    <%= form.label :repair_order_notes %>
+    <%= form.label :repair_order_notes, 'Notes' %>
     <%= form.text_field :repair_order_notes, id: :repair_order_repair_order_notes %>
   </div>
 
   <div class="field">
-    <%= form.label :customer_id %>
+    <%= form.label :customer_id, 'Customer' %>
     <%= form.text_field :customer_id, id: :repair_order_customer_id %>
   </div>
 
   <div class="field">
-    <%= form.label :repair_order_status_date %>
+    <%= form.label :repair_order_status_date, 'Date of Status Change' %>
     <%= form.date_select :repair_order_status_date, id: :repair_order_repair_order_status_date %>
   </div>
 

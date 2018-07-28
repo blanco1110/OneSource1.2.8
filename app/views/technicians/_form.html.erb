@@ -12,17 +12,17 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :tech_name %>
+    <%= form.label :tech_name, 'Name' %>
     <%= form.text_field :tech_name, id: :technician_tech_name %>
   </div>
 
   <div class="field">
-    <%= form.label :technician_status_id %>
+    <%= form.label :technician_status_id, 'Status' %>
     <%= form.collection_select :technician_status_id, TechnicianStatus.all, :id, :tech_status %>
   </div>
 
   <div class="field">
-    <%= form.label :tech_expertise_notes %>
+    <%= form.label :tech_expertise_notes, 'Expertise Note' %>
     <%= form.text_field :tech_expertise_notes, id: :technician_tech_expertise_notes %>
   </div>
 
