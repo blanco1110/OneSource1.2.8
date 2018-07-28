@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root 'dashboard#index', as: 'dashboard_index'
+
   resources :repair_order_items
   resources :devices
   resources :repair_orders
