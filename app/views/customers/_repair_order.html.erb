@@ -2,49 +2,49 @@
   <tr>
     <td>
       <div class="field">
-        <%= form.label :repair_order_status_id %>
+        <%= form.label :repair_order_status_id, 'Repair Order Status' %>
         <%= form.collection_select :repair_order_status_id, RepairOrderStatus.all, :id, :repair_order_status %>
       </div>
     </td>
     <td>
       <div class="field">
-        <%= form.label :repair_order_date %>
+        <%= form.label :repair_order_date, 'Date' %>
         <%= form.date_select :repair_order_date, id: :repair_order_repair_order_date %>
       </div>
     </td>
     <td>
       <div class="field">
-        <%= form.label :repair_order_subtotal %>
+        <%= form.label :repair_order_subtotal, 'Subtotal' %>
         <%= form.text_field :repair_order_subtotal, id: :repair_order_repair_order_subtotal %>
       </div>
     </td>
     <td>
       <div class="field">
-        <%= form.label :repair_order_tax %>
+        <%= form.label :repair_order_tax, 'Tax' %>
         <%= form.text_field :repair_order_tax, id: :repair_order_repair_order_tax %>
       </div>
     </td>
     <td>
       <div class="field">
-        <%= form.label :repair_order_total %>
+        <%= form.label :repair_order_total, 'Total' %>
         <%= form.text_field :repair_order_total, id: :repair_order_repair_order_total %>
       </div>
     </td>
     <td>
       <div class="field">
-        <%= form.label :repair_order_accessories %>
+        <%= form.label :repair_order_accessories, 'Accessories' %>
         <%= form.text_field :repair_order_accessories, id: :repair_order_repair_order_accessories %>
       </div>
     </td>
     <td>
       <div class="field">
-        <%= form.label :repair_order_notes %>
+        <%= form.label :repair_order_notes, 'Notes' %>
         <%= form.text_field :repair_order_notes, id: :repair_order_repair_order_notes %>
       </div>
     </td>
     <td>
       <div class="field">
-        <%= form.label :repair_order_status_date %>
+        <%= form.label :repair_order_status_date, 'Repair Order Status Date' %>
         <%= form.date_select :repair_order_status_date, id: :repair_order_repair_order_status_date %>
       </div>
     </td>
