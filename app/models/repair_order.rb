@@ -20,4 +20,9 @@ class RepairOrder < ApplicationRecord
     update_columns(repair_order_subtotal: sub, repair_order_total: total, repair_order_tax: taxtot)
   end
 
+
+  validates :repair_order_subtotal, presence: true
+  validates :repair_order_tax, presence: true
+  validates :repair_order_notes, presence: true
+
 end
