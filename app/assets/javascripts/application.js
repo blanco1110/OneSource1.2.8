@@ -31,5 +31,10 @@ $(document).on('turbolinks:load', function() {
         return event.preventDefault();
     });
 
+    $("#customers_search input").keyup(function() {
+        $.get($("#customers_search").attr("action"), $("#customers_search").serialize(), null, "script");
+        return false;
+    });
+
 });
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180721175840) do
+ActiveRecord::Schema.define(version: 20180729185116) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -83,6 +83,7 @@ ActiveRecord::Schema.define(version: 20180721175840) do
     t.bigint "device_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.decimal "price", precision: 18, scale: 2
     t.index ["device_component_id"], name: "index_repair_order_items_on_device_component_id"
     t.index ["device_id"], name: "index_repair_order_items_on_device_id"
     t.index ["technician_id"], name: "index_repair_order_items_on_technician_id"

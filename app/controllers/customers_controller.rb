@@ -1,10 +1,11 @@
 class CustomersController < ApplicationController
   before_action :set_customer, only: [:show, :edit, :update, :destroy]
+  helper_method :sort_column, :sort_direction
 
   # GET /customers
   # GET /customers.json
   def index
-    @customers = Customer.all
+    @customers = Customer.search(params[:search])
   end
 
   # GET /customers/1
@@ -70,6 +71,6 @@ class CustomersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def customer_params
-      params.require(:customer).permit(:customer_fname, :customer_lname, :customer_email, :customer_phone, :customer_call, :customer_text, :customer_zip, :repair_orders_attributes => [:id, :repair_order_status_id, :repair_order_date, :repair_order_subtotal, :repair_order_tax, :repair_order_total, :repair_order_accessories, :repair_order_notes, :customer_id, :repair_order_status_date, :devices_attributes => [:id, :imei_number, :device_version_id, :device_type, :device_color, :device_notes, :repair_order_id, :repair_order_items_attributes => [:id, :device_component_id, :technician_id, :warranty_expire_date, :warranty_coverage_notes, :repaired_as_warranty, :warranty_repair_date, :device_id]]])
+      params.require(:customer).permit(:customer_fname, :customer_lname, :customer_email, :customer_phone, :customer_call, :customer_text, :customer_zip, :repair_orders_attributes => [:id, :repair_order_status_id, :repair_order_date, :repair_order_subtotal, :repair_order_tax, :repair_order_total, :repair_order_accessories, :repair_order_notes, :customer_id, :repair_order_status_date, :devices_attributes => [:id, :imei_number, :device_version_id, :device_type, :device_color, :device_notes, :repair_order_id, :repair_order_items_attributes => [:id, :device_component_id, :technician_id, :warranty_expire_date, :warranty_coverage_notes, :repaired_as_warranty, :warranty_repair_date, :price, :device_id]]])
     end
 end
