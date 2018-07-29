@@ -4,7 +4,7 @@ class Customer < ApplicationRecord
   validates :customer_fname, presence: true
   validates :customer_lname, presence: true
   validates :customer_email, presence: true
-  validates :customer_zip, presences: true
+  validates :customer_zip, presence: true
 
 
   def self.search(search)

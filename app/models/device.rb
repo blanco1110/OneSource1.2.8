@@ -5,6 +5,5 @@ class Device < ApplicationRecord
   accepts_nested_attributes_for :repair_order_items
 
   validates :imei_number, presence: true
-  validates :device_types, presence: true
   validates :device_color, presence: true
 end
