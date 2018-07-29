@@ -13,7 +13,11 @@
  *= require_tree .
  *= require_self
  */
-
+.card-body{
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10%;
+}
 /*NAVIGATION BAR COLORS*/
 .navbar {
     background-color: #222629;
@@ -160,14 +164,7 @@
     background-color: #17c637;
 }
 
-/* BUTTONS*/
-/*
-.btn-primary {
-    color: #17c637;
-    background-color: #222629;
-    border-color: #17c637;
-}
-*/
+
 /* TABLES*/
 tr:nth-child(even){
     background-color: #17c63716;
@@ -175,8 +172,8 @@ tr:nth-child(even){
 thead{
     background-color: #22262916;
 }
-/*only create customer so far*/
 .btn-outline{
-    border-color: #17c637
+    border-color: #17c637;
+
 }
 

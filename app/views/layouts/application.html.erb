@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>OneSourcePrototype128</title>
-    <meta charset="utf-8">
     <%= csrf_meta_tags %>
+
     <!---- bootstrap css. online version--->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Custom styles --->
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+
   <header>
     <!--navigation bar for entire application-->
     <nav class="navbar navbar-expand-sm">
@@ -23,6 +25,7 @@
           </a>
         </div>
         <!-- Links -->
+
         <ul class="navbar-nav" style="font-size: large">
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -55,7 +58,7 @@
         </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <%= image_tag("https://i.imgur.com/kMB3t8E.png", size: "32x32") %>
+              <%= image_tag("https://i.imgur.com/UKHbfrs.png", size: "32x32") %>
               Admin
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -73,12 +76,20 @@
       </div>
     </nav>
   </header>
+
   <body>
-    <%= yield %>
-  </body>
+  <!--scaffold spacing -->
+  <div class="mx-auto" style="width:90%">
+    <div class="card-body">
+        <%= yield %>
+    </div>
+  </div>
+
+
+
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
-
+  </body>
 </html>
