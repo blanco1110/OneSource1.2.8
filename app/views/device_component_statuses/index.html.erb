@@ -1,8 +1,7 @@
 <p id="notice"><%= notice %></p>
-
+<div class="container">
 <h1>Device Component Statuses</h1>
-
-<table>
+  <table class="table table-hover table-responsive">
   <thead>
     <tr>
       <th>Device Component Status</th>
@@ -23,5 +22,7 @@
 </table>
 
 <br>
-
-<%= link_to 'New Device Component Status', new_device_component_status_path %>
+  <div class="col-sm-1 col-xs-1 col-md-1 col-lg-1">
+  <a class="btn btn-outline" href="device_component_statuses/new">New Device Component Status</a>
+</div>
+</div>

@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
-
+<div class="container">
 <h1>Customers</h1>
 
-<table>
+  <table class="table table-responsive table-hover">
   <thead>
     <tr>
       <th>First Name</th>
@@ -35,5 +35,7 @@
 </table>
 
 <br>
-
-<%= link_to 'New Customer', new_customer_path %>
+<div class="col-sm-1 col-xs-1 col-md-1 col-lg-1">
+  <a class="btn btn-outline" href="/customers/new">New Customer</a>
+</div>
+</div>

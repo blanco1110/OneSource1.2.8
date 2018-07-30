@@ -86,10 +86,14 @@ body {
     display: block;
   }
 
-/*only create customer so far*/
-.btn-outline{
-  border-color: #17c637
+/* TABLES*/
+tr:nth-child(even){
+  background-color: #17c63716;
 }
+thead{
+  background-color: #22262916;
+}
+
 /* BUTTONS*/
 
 .btn-primary {
@@ -98,6 +102,11 @@ body {
   background-color: #222629;
   border-color: #17c637;
 }
+/*only create customer so far*/
+.btn-outline{
+  border-color: #17c637
+}
+
 /* create button*/
 input[type=submit]:hover {
   background-color: #45a049;}

@@ -1,8 +1,7 @@
 <p id="notice"><%= notice %></p>
-
+<div class="container">
 <h1>Items in Repair Orders</h1>
-
-<table>
+  <table class="table table-hover table-responsive">
   <thead>
     <tr>
       <th>Component</th>
@@ -36,4 +35,7 @@
 
 <br>
 
-<%= link_to 'New Repair Order Item', new_repair_order_item_path %>
+  <div class="col-sm-1 col-xs-1 col-md-1 col-lg-1">
+    <a class="btn btn-outline" href="repair_order_items/new">New Repair Order Item</a>
+  </div>
+</div>

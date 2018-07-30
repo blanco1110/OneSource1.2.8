@@ -1,8 +1,7 @@
 <p id="notice"><%= notice %></p>
-
+<div class="container">
 <h1>Technician Statuses</h1>
-
-<table>
+  <table class="table table-hover table-responsive">
   <thead>
     <tr>
       <th>Status</th>
@@ -24,4 +23,7 @@
 
 <br>
 
-<%= link_to 'New Technician Status', new_technician_status_path %>
+    <div class="col-sm-1 col-xs-1 col-md-1 col-lg-1">
+      <a class="btn btn-outline" href="technician_statuses/new">New Technician Status</a>
+    </div>
+</div>

@@ -165,15 +165,12 @@
 }
 
 
-/* TABLES*/
-tr:nth-child(even){
-    background-color: #17c63716;
-}
-thead{
-    background-color: #22262916;
-}
+
 .btn-outline{
     border-color: #17c637;
 
 }
-
+.jumbotron{
+    background-image: url("https://i.imgur.com/dnL4nLW.png");
+    background-size: cover;
+}
