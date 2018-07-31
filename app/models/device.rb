@@ -8,6 +8,6 @@ class Device < ApplicationRecord
   accepts_nested_attributes_for :device_pre_tests
   accepts_nested_attributes_for :device_post_tests
 
-  validates :imei_number, presence: true
+  validates :imei_number, length: {minimum: 15}, presence: true
   validates :device_color, presence: true
 end
