@@ -67,17 +67,18 @@ body {
     background-color: #f0f0f0;
 
     h2 {
-      text-align: left;
+      text-align: center;
       font-weight: bold;
       padding: 5px 5px 5px 15px;
       font-size: 12px;
       margin: -7px -7px 0;
       background-color: #c00;
       color: #fff;
+
     }
 
     ul li {
-      font-size: 12px;
+      font-size: 15px;
       list-style: square;
     }
   }
@@ -91,7 +92,8 @@ tr:nth-child(even){
   background-color: #17c63716;
 }
 thead{
-  background-color: #22262916;
+  color: #fff;
+  background-image: url("https://i.imgur.com/dnL4nLW.png");
 }
 
 /* BUTTONS*/

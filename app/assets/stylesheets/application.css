@@ -62,8 +62,8 @@
 .navbar .navbar-nav .dropdown-menu .dropdown-item:hover,
 .navbar .navbar-nav .dropdown-menu .dropdown-item:focus,
 .navbar .navbar-nav .dropdown-menu .dropdown-item.active {
-    color: #6b6e70;
-    background-color: #17c63727;
+    color: #17c637;
+   /* background-color: #17c63727;*/
 }
 .navbar .navbar-nav .dropdown-menu .dropdown-divider {
     border-top-color: #17c637;
@@ -75,8 +75,8 @@
 .navbar .navbar-nav .nav-item.show .nav-link,
 .navbar .navbar-nav .nav-item.show .nav-link:hover,
 .navbar .navbar-nav .nav-item.show .nav-link:focus {
-    color: #6b6e70;
-    background-color: #17c63715;
+    color: #17c637;
+    background-color: transparent;
 }
 .navbar .navbar-toggle {
     border-color: #17c637;
@@ -167,13 +167,11 @@
     background-color: #17c637;
 }
 
-
-
 .btn-outline{
     border-color: #17c637;
-
 }
-.jumbotron{
+
+.dashboardback{
     background-image: url("https://i.imgur.com/dnL4nLW.png");
     background-size: cover;
 }

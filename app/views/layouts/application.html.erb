@@ -14,7 +14,7 @@
   <header>
     <!--navigation bar for entire application-->
     <nav class="navbar navbar-expand-sm">
-      <div class="container">
+      <div class="container" style="padding-left: 0;">
         <!-- text to right-->
         <!-- logo image-->
         <div class="navbar-header" style="font-size: large">
@@ -40,7 +40,7 @@
 
           </li><li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <%= image_tag("https://imgur.com/IUWYG9x.png", size: "32x32") %>
+            <%= image_tag("https://i.imgur.com/IUWYG9x.png", size: "32x32") %>
             Phones
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -64,6 +64,7 @@
               <a class="dropdown-item" href="/device_component_statuses">Device Co Status</a>
               <a class="dropdown-item" href="/repair_order_statuses">Repair Ord Stat</a>
               <a class="dropdown-item" href="/technician_statuses">Tech Stat</a>
+              <a class="dropdown-item" href="/tests">Tests</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="/technicians">
                 Technicians

@@ -29,36 +29,39 @@
     </td>
     <td>
       <div class="field">
-        <%= form.label :repair_order_status_id %>
+        <%= form.label :repair_order_status_id, "Repair Order Status" %>
         <%= form.collection_select :repair_order_status_id, RepairOrderStatus.all, :id, :repair_order_status %>
       </div>
     </td>
     <td>
       <div class="field">
-        <%= form.label :repair_order_status_date %>
+        <%= form.label :repair_order_status_date, "Date" %>
         <%= form.date_select :repair_order_status_date, id: :repair_order_repair_order_status_date, :disabled => true%>
       </div>
     </td>
     <td>
       <div class="field">
-        <%= form.label :repair_order_accessories %>
+        <%= form.label :repair_order_accessories, "Accessories" %>
         <%= form.text_field :repair_order_accessories, id: :repair_order_repair_order_accessories %>
-      </div>
-    </td>
-    <td>
-      <div class="field">
-        <%= form.label :repair_order_notes %>
-        <%= form.text_field :repair_order_notes, id: :repair_order_repair_order_notes %>
       </div>
     </td>
   </tr>
 </table>
 
+      <div class="form-row">
+        <div class="field">
+         <%= form.label :repair_order_notes, "Notes" %>
+         <%= form.text_area :repair_order_notes, id: :repair_order_repair_order_notes, size:"80x4" %>
+         </div>
+      </div>
+
+
+
 
   <%= form.fields_for :devices do |builder| %>
     <%= render 'device', form: builder %>
   <% end %>
-  <%= link_to_add_row('Add Device', form, :devices, class: 'btn btn-outline') %>
+  <%= link_to_add_row('Add Device', form, :devices, class: 'btn btn-outline btn-block') %>
 
 
 

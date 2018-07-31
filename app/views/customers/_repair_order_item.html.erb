@@ -1,52 +1,52 @@
 <div class="card" style="border-color: #222629; background-color: #22262920">
   <div class="card-body">
-<fieldset>
-  <table>
-    <tr>
-      <td>
-        <div class="field">
-          <%= form.label :device_component_id %>
-          <%= form.collection_select :device_component_id, DeviceComponent.all, :id, :device_comp_name %>
-        </div>
-      </td>
-      <td>
-        <div class="field">
-          <%= form.label :technician_id %>
-          <%= form.collection_select :technician_id, Technician.all, :id, :tech_name %>
-        </div>
-      </td>
-      <td>
-        <div class="field">
-          <%= form.label :warranty_expire_date %>
-          <%= form.date_select :warranty_expire_date, id: :repair_order_item_warranty_expire_date, :disabled => true, :include_blank => true%>
-        </div>
-      </td>
-      <td>
-        <div class="field">
-          <%= form.label :warranty_coverage_notes %>
-          <%= form.text_field :warranty_coverage_notes, id: :repair_order_item_warranty_coverage_notes %>
-        </div>
-      </td>
-      <td>
-        <div class="field">
-          <%= form.label :repaired_as_warranty %>
-          <%= form.check_box :repaired_as_warranty, id: :repair_order_item_repaired_as_warranty %>
-        </div>
-      </td>
-      <td>
-        <div class="field">
-          <%= form.label :warranty_repair_date %>
-          <%= form.date_select :warranty_repair_date, id: :repair_order_item_warranty_repair_date, :disabled => true,  :include_blank => true%>
-        </div>
-      </td>
-      <td>
-        <div class="field">
-          <%= form.label :price %>
-          <%= form.text_field :price, id: :repair_order_item_price %>
-        </div>
-      </td>
-    </tr>
-  </table>
-</fieldset>
-</div>
+    <fieldset>
+       <table>
+        <tr>
+           <td>
+            <div class="field">
+              <%= form.label :device_component_id %>
+              <%= form.collection_select :device_component_id, DeviceComponent.all, :id, :device_comp_name %>
+            </div>
+           </td>
+          <td>
+            <div class="field">
+              <%= form.label :technician_id %>
+              <%= form.collection_select :technician_id, Technician.all, :id, :tech_name %>
+             </div>
+          </td>
+          <td>
+           <div class="field">
+             <%= form.label :warranty_expire_date %>
+             <%= form.date_select :warranty_expire_date, id: :repair_order_item_warranty_expire_date, :disabled => true, :include_blank => true%>
+           </div>
+          </td>
+          <td>
+            <div class="field">
+              <%= form.label :warranty_coverage_notes %>
+              <%= form.text_field :warranty_coverage_notes, id: :repair_order_item_warranty_coverage_notes %>
+            </div>
+          </td>
+          <td>
+            <div class="field">
+              <%= form.label :repaired_as_warranty %>
+              <%= form.check_box :repaired_as_warranty, id: :repair_order_item_repaired_as_warranty %>
+            </div>
+          </td>
+          <td>
+            <div class="field">
+              <%= form.label :warranty_repair_date %>
+              <%= form.date_select :warranty_repair_date, id: :repair_order_item_warranty_repair_date, :disabled => true,  :include_blank => true%>
+            </div>
+          </td>
+          <td>
+            <div class="field">
+              <%= form.label :price %>
+               <%= form.text_field :price, id: :repair_order_item_price %>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+  </div>
 </div>
