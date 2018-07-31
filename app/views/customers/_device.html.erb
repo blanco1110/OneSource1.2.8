@@ -34,6 +34,31 @@
     </tr>
   </table>
 
+  <table>
+    <tr>
+
+  <%= form.fields_for :device_pre_tests do |builder| %>
+      <%= render 'device_pre_test', form: builder %>
+  <% end %>
+
+    </tr>
+  </table>
+
+  <%= link_to_add_row('Add Repair Pre-Test', form, :device_pre_tests, class: 'btn btn-primary') %>
+
+  <table>
+    <tr>
+
+      <%= form.fields_for :device_post_tests do |builder| %>
+          <%= render 'device_post_test', form: builder %>
+      <% end %>
+
+    </tr>
+  </table>
+
+  <%= link_to_add_row('Add Repair Post-Test', form, :device_post_tests, class: 'btn btn-primary') %>
+
+
 <%= form.fields_for :repair_order_items do |builder| %>
     <%= render 'repair_order_item', form: builder %>
 <% end %>

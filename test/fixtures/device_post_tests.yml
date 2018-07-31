@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  device: one
+  test: one
+  post_test_condition: false
+
+two:
+  device: two
+  test: two
+  post_test_condition: false

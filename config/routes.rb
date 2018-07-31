@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :device_post_tests
+  resources :device_pre_tests
+  resources :tests
   resources :repair_order_items
   resources :devices
   resources :repair_orders
