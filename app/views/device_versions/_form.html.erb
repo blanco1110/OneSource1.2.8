@@ -22,7 +22,9 @@
     <%= form.collection_select :device_manufacturer_id, DeviceManufacturer.all, :id, :device_manu_name %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+
+    <div class="actions">
+      <button type="submit" class="btn btn-outline btl-lg"> Create Device Version</button>
+    </div>
+
 <% end %>

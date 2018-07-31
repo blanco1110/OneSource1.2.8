@@ -94,6 +94,7 @@ tr:nth-child(even){
 thead{
   color: #fff;
   background-image: url("https://i.imgur.com/dnL4nLW.png");
+  letter-spacing: 1px;
 }
 
 /* BUTTONS*/
@@ -102,13 +103,27 @@ thead{
   border: solid #17c637;
   color: #fff;
   background-color: #222629;
-  border-color: #17c637;
+
 }
 /*only create customer so far*/
 .btn-outline{
-  border-color: #17c637
+  border-color: #17c637;
+  background-color: transparent;
+}
+/* solid border glitch*/
+.btn-outline:hover {
+  border-color: #17c637;
+  color: #fff;
+  background-color: #222629;
 }
 
-/* create button*/
 input[type=submit]:hover {
-  background-color: #45a049;}
+  background-color: #222629;
+  color: #fff;
+  border-color: #17c637;}
+
+input[type=submit]{
+  background-color: #fff;
+  border-color: #17c637;
+  color: #222629;
+}
