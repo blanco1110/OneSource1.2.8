@@ -1,0 +1,71 @@
+<h1>Repair Order Totals</h1>
+<%= form_tag(repair_order_report_path, :method => :post) do %>
+    <p>Start Date</p>
+    <%= date_field_tag :start_date %>
+    <p>End Date</p>
+    <%= date_field_tag :end_date %>
+
+    <br>
+    <br>
+    <%= submit_tag "Submit" %>
+    <!--%= RepairOrder.sum(:repair_order_subtotal) %>-->
+    <br>
+    <p><b><%= render "repair_order_report/start_date" %> - <%= render "repair_order_report/end_date" %> </b></p>
+
+    <p><b>Order Count</b>
+      <%= render "repair_order_report/count" %></p>
+    <p><b>Report Subtotal:</b>
+      <%= render "repair_order_report/x" %></p>
+
+    <p><b>Report Tax:</b>
+      <%= render "repair_order_report/y" %></p>
+
+    <p><b>Report Total:</b>
+      <%= render "repair_order_report/z" %></p>
+
+<%end %>
+<br>
+<br>
+<!--<p> <b>Overall Subtotal</b></p>-->
+<!--<!-form_tag(repair_order_report_path, :method => :post) do %>&ndash;&gt;-->
+<!--%= file_field_tag :repair_order_subtotal %>-->
+<!--%end %>-->
+
+<!--<p> Overall Tax</p>-->
+<!--<p> Overall Total</p>-->
+<table>
+  <thead>
+  <tr>
+    <th>Order Status</th>
+    <th>Order Date</th>
+    <th>Customer First Name</th>
+    <th>Customer Last Name</th>
+    <th>Order Subtotal</th>
+    <th>Order Tax</th>
+    <th>Order Total</th>
+    <th>Order Accessories</th>
+    <th>Order Notes</th>
+    <th>Order Status Update Date</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @repair_orders.each do |repair_order| %>
+      <tr>
+        <td><%= repair_order.repair_order_status.repair_order_status %></td>
+        <td><%= repair_order.repair_order_date %></td>
+        <td><%= repair_order.customer.customer_fname %></td>
+        <td><%= repair_order.customer.customer_lname %></td>
+        <td><%= repair_order.repair_order_subtotal %></td>
+        <td><%= repair_order.repair_order_tax %></td>
+        <td><%= repair_order.repair_order_total %></td>
+        <td><%= repair_order.repair_order_accessories %></td>
+        <td><%= repair_order.repair_order_notes %></td>
+        <td><%= repair_order.repair_order_status_date %></td>
+
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+

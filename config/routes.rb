@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+
+  get 'open_order_report', to: 'open_order_report#index'
+  post 'open_order_report', to: 'open_order_report#index'
+  get 'repair_order_report', to: 'repair_order_report#index'
+  post 'repair_order_report', to: 'repair_order_report#index'
+
   resources :device_post_tests
   resources :device_pre_tests
   resources :tests
