@@ -19,7 +19,7 @@
   <tbody>
     <% @repair_order_items.each do |repair_order_item| %>
       <tr>
-        <td><%= repair_order_item.device_component %></td>
+        <td><%= repair_order_item.device_component_id %></td>
         <td><%= repair_order_item.technician %></td>
         <td><%= repair_order_item.warranty_expire_date %></td>
         <td><%= repair_order_item.warranty_coverage_notes %></td>

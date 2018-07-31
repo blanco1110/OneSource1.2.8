@@ -6,8 +6,8 @@ git_source(:github) do |repo_name|
 end
 
 gem 'jquery-rails'
-
-
+gem 'ransack'
+gem 'binding_of_caller'
 gem 'bootstrap', '~> 4.1.1'
 gem 'better_errors'
 gem 'will_paginate', '~> 3.1.0'

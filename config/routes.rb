@@ -1,13 +1,14 @@
 Rails.application.routes.draw do
 
-  get 'warranty_report/index'
-
   get 'open_order_report', to: 'open_order_report#index'
   post 'open_order_report', to: 'open_order_report#index'
   get 'repair_order_report', to: 'repair_order_report#index'
   post 'repair_order_report', to: 'repair_order_report#index'
   get 'warranty_report', to: 'warranty_report#index'
   post 'warranty_report', to: 'warranty_report#index'
+  get 'repair_component_per_order_report', to:'repair_component_per_order_report#index'
+  post 'repair_component_per_order_report', to:'repair_component_per_order_report#index'
+
 
   resources :device_post_tests
   resources :device_pre_tests

@@ -28,6 +28,7 @@
         <td><%= number_to_currency(repair_order.repair_order_total) %></td>
         <td><%= repair_order.repair_order_accessories %></td>
         <td><%= repair_order.repair_order_notes %></td>
+        <td><%= repair_order.customer.customer_fname %></td>
         <td><%= repair_order.repair_order_status_date %></td>
         <td><%= link_to 'Show', repair_order %></td>
         <td><%= link_to 'Edit', edit_repair_order_path(repair_order) %></td>
