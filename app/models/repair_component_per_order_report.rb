@@ -32,7 +32,11 @@ class RepairComponentPerOrderReport
         RepairOrderItem.arel_table.join(RepairOrder.arel_table).on(
             RepairOrder.arel_table[:id].eq(Device.arel_table[:repair_order_id])
         ).join_sources
-    )
+    ).order(RepairOrderItem.arel_table[:device_component_id])
+
+
   end
+
+
 
 end
