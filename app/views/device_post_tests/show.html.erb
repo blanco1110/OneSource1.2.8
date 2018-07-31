@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Device:</strong>
+  <%= @device_post_test.device %>
+</p>
+
+<p>
+  <strong>Test:</strong>
+  <%= @device_post_test.test %>
+</p>
+
+<p>
+  <strong>Post test condition:</strong>
+  <%= @device_post_test.post_test_condition %>
+</p>
+
+<%= link_to 'Edit', edit_device_post_test_path(@device_post_test) %> |
+<%= link_to 'Back', device_post_tests_path %>

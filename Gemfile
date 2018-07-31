@@ -10,6 +10,11 @@ gem 'better_errors'
 gem 'binding_of_caller'
 gem 'jquery-rails'
 
+
+gem 'bootstrap', '~> 4.1.1'
+gem 'better_errors'
+gem 'will_paginate', '~> 3.1.0'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.6'
 # Use postgresql as the database for Active Record
@@ -56,5 +61,4 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-# Avoid Polling for Windows
 gem 'wdm', '~> 0.1.1'

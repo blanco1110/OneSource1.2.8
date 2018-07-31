@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-  root 'dashboard#index', as: 'dashboard_index'
 
+  root 'dashboard#index', as: 'dashboard_index'
+  resources :device_post_tests
+  resources :device_pre_tests
+  resources :tests
   resources :repair_order_items
   resources :devices
   resources :repair_orders

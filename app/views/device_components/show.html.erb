@@ -26,8 +26,8 @@
 </p>
 
 <p>
-  <strong>Cost:</strong>
-  <%= @device_component.device_comp_cost %>
+  <strong>Device comp cost:</strong>
+  <%= number_to_currency(@device_component.device_comp_cost) %>
 </p>
 
 <%= link_to 'Edit', edit_device_component_path(@device_component) %> |

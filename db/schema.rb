@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180721175840) do
+ActiveRecord::Schema.define(version: 20180729220512) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,6 +52,26 @@ ActiveRecord::Schema.define(version: 20180721175840) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "device_post_tests", force: :cascade do |t|
+    t.bigint "device_id"
+    t.bigint "test_id"
+    t.boolean "post_test_condition"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["device_id"], name: "index_device_post_tests_on_device_id"
+    t.index ["test_id"], name: "index_device_post_tests_on_test_id"
+  end
+
+  create_table "device_pre_tests", force: :cascade do |t|
+    t.bigint "device_id"
+    t.bigint "test_id"
+    t.boolean "pre_test_condition"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["device_id"], name: "index_device_pre_tests_on_device_id"
+    t.index ["test_id"], name: "index_device_pre_tests_on_test_id"
+  end
+
   create_table "device_versions", force: :cascade do |t|
     t.string "device_version_name"
     t.bigint "device_manufacturer_id"
@@ -83,6 +103,7 @@ ActiveRecord::Schema.define(version: 20180721175840) do
     t.bigint "device_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.decimal "price", precision: 18, scale: 2
     t.index ["device_component_id"], name: "index_repair_order_items_on_device_component_id"
     t.index ["device_id"], name: "index_repair_order_items_on_device_id"
     t.index ["technician_id"], name: "index_repair_order_items_on_technician_id"
@@ -125,8 +146,19 @@ ActiveRecord::Schema.define(version: 20180721175840) do
     t.index ["technician_status_id"], name: "index_technicians_on_technician_status_id"
   end
 
+  create_table "tests", force: :cascade do |t|
+    t.string "test_name"
+    t.string "test_description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   add_foreign_key "device_components", "device_component_statuses"
   add_foreign_key "device_components", "device_versions"
+  add_foreign_key "device_post_tests", "devices"
+  add_foreign_key "device_post_tests", "tests"
+  add_foreign_key "device_pre_tests", "devices"
+  add_foreign_key "device_pre_tests", "tests"
   add_foreign_key "device_versions", "device_manufacturers"
   add_foreign_key "devices", "device_versions"
   add_foreign_key "devices", "repair_orders"

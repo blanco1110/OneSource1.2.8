@@ -42,7 +42,12 @@
   </div>
 
   <div class="field">
-    <%= form.label :device_id, "Device" %>
+    <%= form.label :price %>
+    <%= form.text_field :price, id: :repair_order_item_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :device_id %>
     <%= form.text_field :device_id, id: :repair_order_item_device_id %>
   </div>
 

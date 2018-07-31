@@ -17,12 +17,12 @@
   <tbody>
     <% @device_components.each do |device_component| %>
       <tr>
-        <td><%= device_component.device_version %></td>
+        <td><%= device_component.device_version.device_version_name %></td>
         <td><%= device_component.device_comp_name %></td>
         <td><%= device_component.device_comp_color %></td>
         <td><%= device_component.device_comp_description %></td>
-        <td><%= device_component.device_component_status %></td>
-        <td><%= device_component.device_comp_cost %></td>
+        <td><%= device_component.device_component_status.device_comp_status %></td>
+        <td><%= number_to_currency(device_component.device_comp_cost) %></td>
         <td><%= link_to 'Show', device_component %></td>
         <td><%= link_to 'Edit', edit_device_component_path(device_component) %></td>
         <td><%= link_to 'Destroy', device_component, method: :delete, data: { confirm: 'Are you sure?' } %></td>

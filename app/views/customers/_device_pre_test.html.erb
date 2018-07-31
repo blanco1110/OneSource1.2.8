@@ -1,0 +1,18 @@
+<td>
+<table>
+  <tr>
+    <td>
+      <div class="field">
+        <%= form.label :test_id %>
+        <%= form.collection_select :test_id, Test.all, :id, :test_name %>
+      </div>
+    </td>
+    <td>
+      <div class="field">
+        <%= form.label :pre_test_condition %>
+        <%= form.check_box :pre_test_condition, id: :device_pre_test_pre_test_condition %>
+      </div>
+    </td>
+  </tr>
+</table>
+</td>
