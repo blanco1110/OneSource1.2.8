@@ -1,3 +1,4 @@
+
 <%= form_with(model: repair_order, local: true) do |form| %>
   <% if repair_order.errors.any? %>
     <div id="error_explanation">
@@ -43,11 +44,11 @@
 
   <div class="field">
     <%= form.label :repair_order_notes, 'Notes' %>
-    <%= form.text_field :repair_order_notes, id: :repair_order_repair_order_notes %>
+    <%= form.text_area :repair_order_notes, id: :repair_order_repair_order_notes %>
   </div>
 
   <div class="field">
-    <%= form.label :repair_order_status_date %>
+    <%= form.label :repair_order_status_date, "Repair Order Status Date" %>
     <%= form.date_select :repair_order_status_date, id: :repair_order_repair_order_status_date %>
   </div>
 
