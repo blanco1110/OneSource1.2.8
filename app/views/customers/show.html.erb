@@ -17,7 +17,7 @@
 
 <p>
 
-  <strong>Customer Phone:</strong>
+  <strong>Phone Number:</strong>
   <%= number_to_phone(@customer.customer_phone) %>
 </p>
 
@@ -35,7 +35,6 @@
   <strong>Zip Code:</strong>
   <%= @customer.customer_zip %>
 </p>
-
 
 <%= link_to 'Edit', edit_customer_path(@customer) %> |
 <%= link_to 'Back', customers_path %>
