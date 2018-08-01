@@ -17,11 +17,10 @@
 
 $(document).on('turbolinks:load', function() {
 
-    $('form').on('click', '.remove_fields', function(event) {
+    $('form').on('click', '.remove_record', function(event) {
         $(this).prev('input[type=hidden]').val('1');
         $(this).closest('fieldset').hide();
         return event.preventDefault();
-
     });
 
     $('form').on('click', '.add_fields', function(event) {
@@ -33,6 +32,11 @@ $(document).on('turbolinks:load', function() {
 
     $("#customers_search input").keyup(function() {
         $.get($("#customers_search").attr("action"), $("#customers_search").serialize(), null, "script");
+        return false;
+    });
+
+    $("#repair_orders_search input").keyup(function() {
+        $.get($("#repair_orders_search").attr("action"), $("#repair_orders_search").serialize(), null, "script");
         return false;
     });
 

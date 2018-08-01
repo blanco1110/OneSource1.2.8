@@ -12,45 +12,76 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :repair_order_status_id, "Status" %>
-    <%= form.collection_select :repair_order_status_id, RepairOrderStatus.all, :id, :repair_order_status %>
-  </div>
+    <div class="field">
+      <%= form.label :customer_id, "Existing Customer ID" %>
+      <%= form.text_field :customer_id, id: :repair_order_customer_id %>
+    </div>
 
-  <div class="field">
-    <%= form.label :repair_order_date, "Date" %>
-    <%= form.date_select :repair_order_date, id: :repair_order_repair_order_date %>
-  </div>
+    <%= form.fields_for :customer do |builder| %>
+        <%= render 'customer', form: builder %>
+    <% end %>
 
-  <div class="field">
-    <%= form.label :repair_order_subtotal, "Subtotal" %>
-    <%= form.text_field :repair_order_subtotal, id: :repair_order_repair_order_subtotal %>
-  </div>
 
-  <div class="field">
-    <%= form.label :repair_order_tax, "Tax" %>
-    <%= form.text_field :repair_order_tax, id: :repair_order_repair_order_tax %>
-  </div>
+    <table>
+      <tr>
+        <td>
+          <div class="field">
 
-  <div class="field">
-    <%= form.label :repair_order_total, "Total" %>
-    <%= form.text_field :repair_order_total, id: :repair_order_repair_order_total %>
-  </div>
+            <%= form.label :repair_order_date, "Repair Order Date" %>
+            <%= form.date_select :repair_order_date, id: :repair_order_repair_order_date, :disabled => true%>
 
-  <div class="field">
-    <%= form.label :repair_order_accessories, 'Accesories' %>
-    <%= form.text_field :repair_order_accessories, id: :repair_order_repair_order_accessories %>
-  </div>
+          </div>
+        </td>
+        <td>
+          <div class="field">
+            <%= form.label :repair_order_subtotal, "Subtotal" %>
+            <%= form.text_field :repair_order_subtotal, id: :repair_order_repair_order_subtotal, :disabled => true%>
+          </div>
+        </td>
+        <td>
+          <div class="field">
+            <%= form.label :repair_order_tax, "Tax" %>
+            <%= form.text_field :repair_order_tax, id: :repair_order_repair_order_tax, :disabled => true%>
+          </div>
+        </td>
+        <td>
+          <div class="field">
+            <%= form.label :repair_order_total, "Total" %>
+            <%= form.text_field :repair_order_total, id: :repair_order_repair_order_total, :disabled => true%>
+          </div>
+        </td>
+        <td>
+          <div class="field">
+            <%= form.label :repair_order_status_id, "Repair Order Status" %>
+            <%= form.collection_select :repair_order_status_id, RepairOrderStatus.all, :id, :repair_order_status %>
+          </div>
+        </td>
+        <td>
+          <div class="field">
+            <%= form.label :repair_order_status_date, "Date" %>
+            <%= form.date_select :repair_order_status_date, id: :repair_order_repair_order_status_date, :disabled => true%>
+          </div>
+        </td>
+        <td>
+          <div class="field">
+            <%= form.label :repair_order_accessories, "Accessories" %>
+            <%= form.text_field :repair_order_accessories, id: :repair_order_repair_order_accessories %>
+          </div>
+        </td>
+      </tr>
+    </table>
 
-  <div class="field">
-    <%= form.label :repair_order_notes, 'Notes' %>
-    <%= form.text_area :repair_order_notes, id: :repair_order_repair_order_notes %>
-  </div>
+    <div class="form-row">
+      <div class="field">
+        <%= form.label :repair_order_notes, "Notes" %>
+        <%= form.text_area :repair_order_notes, id: :repair_order_repair_order_notes, size:"80x4" %>
+      </div>
+    </div>
 
-  <div class="field">
-    <%= form.label :repair_order_status_date, "Repair Order Status Date" %>
-    <%= form.date_select :repair_order_status_date, id: :repair_order_repair_order_status_date %>
-  </div>
+    <%= form.fields_for :devices do |builder| %>
+        <%= render 'device', form: builder %>
+    <% end %>
+    <%= link_to_add_row('Add Device', form, :devices, class: 'btn btn-outline btn-block') %>
 
     <div class="actions">
       <button type="submit" class="btn btn-outline btl-lg"> Create Repair Order</button>
