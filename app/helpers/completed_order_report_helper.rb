@@ -1,0 +1,2 @@
+module CompletedOrderReportHelper
+end

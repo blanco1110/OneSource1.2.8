@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   get 'not_started_order_report', to: 'not_started_order_report#index'
   get 'on_hold_order_report', to: 'on_hold_order_report#index'
   get 'awaiting_parts_report', to: 'awaiting_parts_report#index'
+  get 'completed_order_report', to:'completed_order_report#index'
+
 
 
 
