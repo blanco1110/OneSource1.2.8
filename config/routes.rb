@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-
-
-
   get 'open_order_report', to: 'open_order_report#index'
   post 'open_order_report', to: 'open_order_report#index'
   get 'repair_order_report', to: 'repair_order_report#index'
@@ -14,6 +11,8 @@ Rails.application.routes.draw do
   get 'popular_devices', to:'popular_devices#index'
   get 'top_customer_report', to: 'top_customer_report#index'
   post 'top_customer_report', to: 'top_customer_report#index'
+  get 'not_started_order_report', to: 'not_started_order_report#index'
+
 
 
 
