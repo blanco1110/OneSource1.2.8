@@ -97,11 +97,14 @@ thead{
   padding: 5px;
 }
 .tro{
-  background-image: url("https://i.imgur.com/dnL4nLW.png");
-padding: 15px;
+  background-color: #17c63720;
+  padding: 15px;
+  border-radius: 25px;
+  border: 2px solid #73AD2150;
+  padding: 12px;
 }
-/* BUTTONS*/
 
+/* BUTTONS*/
 .btn-primary {
   border: solid #17c637;
   color: #fff;
@@ -129,4 +132,7 @@ input[type=submit]{
   background-color: #fff;
   border-color: #17c637;
   color: #222629;
+}
+textarea {
+  overflow: auto;
 }

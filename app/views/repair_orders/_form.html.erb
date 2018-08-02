@@ -3,7 +3,6 @@
   <% if repair_order.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(repair_order.errors.count, "error") %> prohibited this repair_order from being saved:</h2>
-
       <ul>
       <% repair_order.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -23,7 +22,7 @@
 </div>
 <div class="jumbotron" >
     <div class="container">
-      <div class="tro" style="color:#fff">
+      <div class="tro">
           <div class="row justify-content-start">
             <div class="col-3">
             <%= form.label :repair_order_date, "Repair Order Date" %>
@@ -54,7 +53,6 @@
               <br>
               <%= form.date_select :repair_order_status_date, id: :repair_order_repair_order_status_date, :disabled => true%>
           </div>
-
 
 <div class="row">
 <div class="col">

@@ -9,8 +9,7 @@
               <%= link_to image_tag("https://i.imgur.com/xJea3q2.png"), '#', class: "remove_record" %>
             </div>
             <%= form.hidden_field :_destroy, as: :hidden %>
-            <%= link_to 'Delete', '#', class: 'remove_record' %>
-          </td>
+             </td>
           <td>
             <div class="field">
               <%= form.label :imei_number, "IEMI Number" %>
@@ -32,7 +31,7 @@
           <td>
             <div class="field">
               <%= form.label :device_notes, "Notes" %>
-              <%= form.text_area :device_notes, id: :device_device_notes, size:"69x3" %>
+              <%= form.text_area :device_notes, id: :device_device_notes, size:"30%x3" %>
             </div>
           </td>
         </tr>

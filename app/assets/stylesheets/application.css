@@ -177,3 +177,7 @@
     background-size: cover;
 }
 
+.tooltipback{
+    background-color: transparent;
+    border: transparent;
+}
