@@ -37,8 +37,8 @@ $(document).on('turbolinks:load', function() {
         return false;
     });
 
-    $("#repair_orders_search input").keyup(function() {
-        $.get($("#repair_orders_search").attr("action"), $("#repair_orders_search").serialize(), null, "script");
+    $("#repairs_search input").keyup(function() {
+        $.get($("#repairs_search").attr("action"), $("#repairs_search").serialize(), null, "script");
         return false;
     });
 

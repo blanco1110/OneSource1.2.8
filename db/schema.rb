@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180802060815) do
+ActiveRecord::Schema.define(version: 20180802222214) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -88,7 +88,6 @@ ActiveRecord::Schema.define(version: 20180802060815) do
 
   create_table "devices", force: :cascade do |t|
     t.bigint "device_version_id"
-    t.string "device_color"
     t.string "device_notes"
     t.bigint "repair_order_id"
     t.datetime "created_at", null: false

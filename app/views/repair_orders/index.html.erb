@@ -2,7 +2,7 @@
 <div class="container">
 <h1>Repair Orders</h1>
 
-  <%= form_tag repair_orders_path, :method => 'get', :id => "repair_orders_search" do %>
+  <%= form_tag repair_orders_path, :method => 'get', :id => "repairs_search" do %>
       <p>
         <%= text_field_tag :search, params[:search] %>
         <%= submit_tag "Search", :name => nil %>
