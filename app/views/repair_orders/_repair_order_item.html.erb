@@ -11,7 +11,8 @@
            <td>
             <div class="field">
               <%= form.label :device_component_id %>
-              <%= form.collection_select :device_component_id, DeviceComponent.all, :id, :device_comp_name %>
+              <%= form.grouped_collection_select :device_component_id, DeviceVersion.order(:device_version_name), :device_components,
+                                                 :device_version_name, :id, :device_comp_name %>
             </div>
            </td>
           <td>
@@ -50,9 +51,15 @@
                <%= form.text_field :price, id: :repair_order_item_price %>
             </div>
           </td>
+          <td>
+            <div class="field">
+              <%= form.label :repair_order_status_id, "Repair Item Status" %>
+              <%= form.collection_select :repair_order_status_id, RepairOrderStatus.all, :id, :repair_order_status %>
+            </div>
+          </td>
         </tr>
       </table>
 
   </div>
 </div>
-</fieldset>
+</fieldset><br />

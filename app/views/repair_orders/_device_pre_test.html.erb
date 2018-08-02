@@ -1,6 +1,10 @@
-<td>
+<fieldset>
 <table>
   <tr>
+    <td>
+      <%= form.hidden_field :_destroy, as: :hidden %>
+      <%= link_to 'Delete', '#', class: 'remove_record' %>
+    </td>
     <td>
       <div class="field">
         <%= form.label :test_id %>
@@ -15,4 +19,4 @@
     </td>
   </tr>
 </table>
-</td>
+</fieldset>

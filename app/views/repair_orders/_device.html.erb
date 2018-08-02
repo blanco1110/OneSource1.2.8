@@ -22,14 +22,8 @@
           </td>
           <td>
             <div class="field">
-              <%= form.label :device_type %>
-              <%= form.text_field :device_type, id: :device_device_type %>
-            </div>
-          </td>
-          <td>
-            <div class="field">
-              <%= form.label :device_color %>
-              <%= form.text_field :device_color, id: :device_device_color %>
+              <%= form.label :device_color_id %>
+              <%= form.collection_select :device_color_id, DeviceColor.all, :id, :color_name%>
             </div>
           </td>
           <td>
@@ -39,40 +33,31 @@
             </div>
           </td>
         </tr>
-      </table>
+      </table><br/>
       <div class="card" style="border-color: #222629; background-color: #fff">
         <div class="card-body">
 
-  <table>
-    <tr>
 
-  <%= form.fields_for :device_pre_tests do |builder| %>
-      <%= render 'device_pre_test', form: builder %>
-  <% end %>
-
-    </tr>
-
-  </table>
-
-  <%= link_to_add_row('Add Repair Pre-Test', form, :device_pre_tests, class: 'btn btn-outline') %>
-
+<table>
+  <tr>
+    <td>
+      <%= form.fields_for :device_pre_tests do |builder| %>
+          <%= render 'device_pre_test', form: builder %>
+      <% end %>
+    </td>
+    <td>
 <!---test 2-->
-
-  <table>
-    <tr>
 
       <%= form.fields_for :device_post_tests do |builder| %>
           <%= render 'device_post_test', form: builder %>
       <% end %>
-
-    </tr>
-  </table>
-
-  <%= link_to_add_row('Add Repair Post-Test', form, :device_post_tests, class: 'btn btn-outline') %>
-
-
+    </td>
+  </tr>
+</table>
+          <%= link_to_add_row('Add Repair Pre-Test', form, :device_pre_tests, class: 'btn btn-outline') %>
+          <%= link_to_add_row('Add Repair Post-Test', form, :device_post_tests, class: 'btn btn-outline') %>
 </div>
-</div>
+</div><br />
 
 <%= form.fields_for :repair_order_items do |builder| %>
     <%= render 'repair_order_item', form: builder %>
@@ -84,4 +69,4 @@
 
   </div>
 </div>
-  </fieldset>
+  </fieldset><br />

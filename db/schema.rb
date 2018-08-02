@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180729220512) do
+ActiveRecord::Schema.define(version: 20180802060815) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,12 @@ ActiveRecord::Schema.define(version: 20180729220512) do
     t.boolean "customer_call"
     t.boolean "customer_text"
     t.string "customer_zip"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "device_colors", force: :cascade do |t|
+    t.string "color_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -82,13 +88,14 @@ ActiveRecord::Schema.define(version: 20180729220512) do
 
   create_table "devices", force: :cascade do |t|
     t.bigint "device_version_id"
-    t.string "device_type"
     t.string "device_color"
     t.string "device_notes"
     t.bigint "repair_order_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "imei_number"
+    t.bigint "device_color_id"
+    t.index ["device_color_id"], name: "index_devices_on_device_color_id"
     t.index ["device_version_id"], name: "index_devices_on_device_version_id"
     t.index ["repair_order_id"], name: "index_devices_on_repair_order_id"
   end
@@ -104,8 +111,10 @@ ActiveRecord::Schema.define(version: 20180729220512) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.decimal "price", precision: 18, scale: 2
+    t.bigint "repair_order_status_id"
     t.index ["device_component_id"], name: "index_repair_order_items_on_device_component_id"
     t.index ["device_id"], name: "index_repair_order_items_on_device_id"
+    t.index ["repair_order_status_id"], name: "index_repair_order_items_on_repair_order_status_id"
     t.index ["technician_id"], name: "index_repair_order_items_on_technician_id"
   end
 
@@ -160,10 +169,12 @@ ActiveRecord::Schema.define(version: 20180729220512) do
   add_foreign_key "device_pre_tests", "devices"
   add_foreign_key "device_pre_tests", "tests"
   add_foreign_key "device_versions", "device_manufacturers"
+  add_foreign_key "devices", "device_colors"
   add_foreign_key "devices", "device_versions"
   add_foreign_key "devices", "repair_orders"
   add_foreign_key "repair_order_items", "device_components"
   add_foreign_key "repair_order_items", "devices"
+  add_foreign_key "repair_order_items", "repair_order_statuses"
   add_foreign_key "repair_order_items", "technicians"
   add_foreign_key "repair_orders", "customers"
   add_foreign_key "repair_orders", "repair_order_statuses"

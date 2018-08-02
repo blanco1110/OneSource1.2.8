@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :device_colors
   root 'dashboard#index', as: 'dashboard_index'
   resources :device_post_tests
   resources :device_pre_tests
