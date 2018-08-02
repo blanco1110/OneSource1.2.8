@@ -1,0 +1,2 @@
+module AwaitingPartsReportHelper
+end
