@@ -29,14 +29,12 @@ body {
       color: #666;
     }
 
-    &:hover {
-      color: #fff;
-      background-color: #000;
-    }
+
   }
 
   th {
     padding-bottom: 5px;
+    border: 3px solid #fff;
   }
 
   td {
@@ -98,7 +96,10 @@ thead{
   border: 2px solid #fff;
   padding: 5px;
 }
-
+.tro{
+  background-image: url("https://i.imgur.com/dnL4nLW.png");
+padding: 15px;
+}
 /* BUTTONS*/
 
 .btn-primary {

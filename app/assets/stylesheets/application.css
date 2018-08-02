@@ -169,9 +169,11 @@
 
 .btn-outline{
     border-color: #17c637;
+    background-color: #fff;
 }
 
 .dashboardback{
     background-image: url("https://i.imgur.com/dnL4nLW.png");
     background-size: cover;
 }
+

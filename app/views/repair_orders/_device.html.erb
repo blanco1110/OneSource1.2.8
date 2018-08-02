@@ -5,31 +5,34 @@
       <table>
         <tr>
           <td>
+            <div class="icon">
+              <%= link_to image_tag("https://i.imgur.com/xJea3q2.png"), '#', class: "remove_record" %>
+            </div>
             <%= form.hidden_field :_destroy, as: :hidden %>
             <%= link_to 'Delete', '#', class: 'remove_record' %>
           </td>
           <td>
             <div class="field">
-              <%= form.label :imei_number %>
-              <%= form.number_field :imei_number, id: :device_imei_number %>
+              <%= form.label :imei_number, "IEMI Number" %>
+              <%= form.number_field :imei_number, id: :device_imei_number%>
             </div>
           </td>
           <td>
             <div class="field">
-              <%= form.label :device_version_id %>
+              <%= form.label :device_version_id, "Version" %>
               <%= form.collection_select :device_version_id, DeviceVersion.all, :id, :device_version_name %>
             </div>
           </td>
           <td>
             <div class="field">
-              <%= form.label :device_color_id %>
+              <%= form.label :device_color_id, "Color" %>
               <%= form.collection_select :device_color_id, DeviceColor.all, :id, :color_name%>
             </div>
           </td>
           <td>
             <div class="field">
-              <%= form.label :device_notes %>
-              <%= form.text_field :device_notes, id: :device_device_notes %>
+              <%= form.label :device_notes, "Notes" %>
+              <%= form.text_area :device_notes, id: :device_device_notes, size:"69x3" %>
             </div>
           </td>
         </tr>
@@ -53,9 +56,25 @@
       <% end %>
     </td>
   </tr>
+
 </table>
+          <div class="jumbotron">
+          <div class="row">
+             <div class="col-sm-12">
+               <div class="row">
+<div class="col-6 col-sm-4">
           <%= link_to_add_row('Add Repair Pre-Test', form, :device_pre_tests, class: 'btn btn-outline') %>
+            </div>
+                 <div class=" col-4 col-sm-4"></div>
+            <div class="col-2 col-sm-4">
           <%= link_to_add_row('Add Repair Post-Test', form, :device_post_tests, class: 'btn btn-outline') %>
+
+          </div>
+          </div>
+        </div>
+          </div>
+          </div>
+
 </div>
 </div><br />
 
@@ -63,7 +82,7 @@
     <%= render 'repair_order_item', form: builder %>
 <% end %>
       <div class="col">
-  <%= link_to_add_row('Add Repair Item', form, :repair_order_items, class: 'btn btn-outline btn-block') %>
+  <%= link_to_add_row('Add Repair Item', form, :repair_order_items, class: 'btn btn-outline btn-block' ) %>
         <div class="col"></div>
       </div>
 

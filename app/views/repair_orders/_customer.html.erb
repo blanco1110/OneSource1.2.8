@@ -34,19 +34,26 @@
   </div>
 </div>
 <!-- second row -->
-<div class="form-row" style="align-content: flex-end">
-  <div class="col-sm-3">
-    <div class="field">
-      <%= form.label :customer_call, "Receive Calls?" %>
-      <%= form.check_box :customer_call, id: :customer_customer_call %>
-    </div>
-  </div>
-
-  <div class="col-sm-3">
-    <div class="field">
-      <%= form.label :customer_text, "Receive Texts?" %>
-      <%= form.check_box :customer_text, id: :customer_customer_text %>
-    </div>
-  </div>
+<div class="container">
+<div class="row flex-end justify-content-center">
+  <h6> Does the customer want to receive calls or texts?</h6>
 </div>
 
+<div class="row  flex-end justify-content-center">
+  <div class="col-sm-1">
+    <%= form.label :customer_call, "Calls" %>
+  </div>
+  <div class="col-sm-1">
+    <%= form.check_box :customer_call, id: :customer_customer_call %>
+  </div>
+
+
+  <div class="col-sm-1">
+    <%= form.label :customer_text, "Texts" %>
+  </div>
+  <div class="col-sm-1">
+    <%= form.check_box :customer_text, id: :customer_customer_text %>
+  </div>
+
+</div>
+</div>
