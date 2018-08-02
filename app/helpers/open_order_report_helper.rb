@@ -1,0 +1,2 @@
+module OpenOrderReportHelper
+end
