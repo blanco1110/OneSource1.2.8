@@ -41,32 +41,30 @@
         <div class="card-body">
 
 
-<table>
-  <tr>
-    <td>
-      <%= form.fields_for :device_pre_tests do |builder| %>
-          <%= render 'device_pre_test', form: builder %>
-      <% end %>
-    </td>
-    <td>
+
+
+
 <!---test 2-->
 
-      <%= form.fields_for :device_post_tests do |builder| %>
-          <%= render 'device_post_test', form: builder %>
-      <% end %>
-    </td>
-  </tr>
 
-</table>
+
+
+
           <div class="jumbotron">
           <div class="row">
              <div class="col-sm-12">
                <div class="row">
 <div class="col-6 col-sm-4">
+  <%= form.fields_for :device_pre_tests do |builder| %>
+      <%= render 'device_pre_test', form: builder %>
+  <% end %>
           <%= link_to_add_row('Add Repair Pre-Test', form, :device_pre_tests, class: 'btn btn-outline') %>
             </div>
                  <div class=" col-4 col-sm-4"></div>
             <div class="col-2 col-sm-4">
+              <%= form.fields_for :device_post_tests do |builder| %>
+                  <%= render 'device_post_test', form: builder %>
+              <% end %>
           <%= link_to_add_row('Add Repair Post-Test', form, :device_post_tests, class: 'btn btn-outline') %>
 
           </div>
