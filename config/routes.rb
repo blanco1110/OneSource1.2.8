@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   get 'top_customer_report', to: 'top_customer_report#index'
   post 'top_customer_report', to: 'top_customer_report#index'
   get 'not_started_order_report', to: 'not_started_order_report#index'
+  get 'on_hold_order_report', to: 'on_hold_order_report#index'
+
 
 
 
