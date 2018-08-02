@@ -1,0 +1,22 @@
+<%= form_with(model: device_color, local: true) do |form| %>
+  <% if device_color.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(device_color.errors.count, "error") %> prohibited this device_color from being saved:</h2>
+
+      <ul>
+      <% device_color.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :color_name %>
+    <%= form.text_field :color_name, id: :device_color_color_name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

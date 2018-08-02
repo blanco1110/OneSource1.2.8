@@ -12,36 +12,32 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :imei_number %>
+    <%= form.label :imei_number, "IMEI Number" %>
     <%= form.number_field :imei_number, id: :device_imei_number %>
   </div>
 
   <div class="field">
-    <%= form.label :device_version_id %>
+    <%= form.label :device_version_id, "Version" %>
     <%= form.collection_select :device_version_id, DeviceVersion.all, :id, :device_version_name %>
   </div>
 
   <div class="field">
-    <%= form.label :device_type %>
-    <%= form.text_field :device_type, id: :device_device_type %>
-  </div>
-
-  <div class="field">
-    <%= form.label :device_color %>
+    <%= form.label :device_color, "Color" %>
     <%= form.text_field :device_color, id: :device_device_color %>
   </div>
 
   <div class="field">
-    <%= form.label :device_notes %>
+    <%= form.label :device_notes, "Notes" %>
     <%= form.text_field :device_notes, id: :device_device_notes %>
   </div>
 
   <div class="field">
-    <%= form.label :repair_order_id %>
+    <%= form.label :repair_order_id, "Repair Order" %>
     <%= form.text_field :repair_order_id, id: :device_repair_order_id %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+    <div class="actions">
+      <button type="submit" class="btn btn-outline btl-lg"> Create Device</button>
+    </div>
+
 <% end %>

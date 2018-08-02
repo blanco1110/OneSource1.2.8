@@ -1,0 +1,88 @@
+<fieldset>
+<div class="card" style="background-color: #17c63723">
+  <div class="card-body">
+
+      <table>
+        <tr>
+          <td>
+            <div class="icon">
+              <%= link_to image_tag("https://i.imgur.com/xJea3q2.png"), '#', class: "remove_record" %>
+            </div>
+            <%= form.hidden_field :_destroy, as: :hidden %>
+             </td>
+          <td>
+            <div class="field">
+              <%= form.label :imei_number, "IEMI Number" %>
+              <%= form.number_field :imei_number, id: :device_imei_number%>
+            </div>
+          </td>
+          <td>
+            <div class="field">
+              <%= form.label :device_version_id, "Version" %>
+              <%= form.collection_select :device_version_id, DeviceVersion.all, :id, :device_version_name %>
+            </div>
+          </td>
+          <td>
+            <div class="field">
+              <%= form.label :device_color_id, "Color" %>
+              <%= form.collection_select :device_color_id, DeviceColor.all, :id, :color_name%>
+            </div>
+          </td>
+          <td>
+            <div class="field">
+              <%= form.label :device_notes, "Notes" %>
+              <%= form.text_area :device_notes, id: :device_device_notes, size:"30%x3" %>
+            </div>
+          </td>
+        </tr>
+      </table><br/>
+      <div class="card" style="border-color: #222629; background-color: #fff">
+        <div class="card-body">
+
+
+
+
+
+<!---test 2-->
+
+
+
+
+
+          <div class="jumbotron">
+          <div class="row">
+             <div class="col-sm-12">
+               <div class="row">
+<div class="col-6 col-sm-4">
+  <%= form.fields_for :device_pre_tests do |builder| %>
+      <%= render 'device_pre_test', form: builder %>
+  <% end %>
+          <%= link_to_add_row('Add Repair Pre-Test', form, :device_pre_tests, class: 'btn btn-outline') %>
+            </div>
+                 <div class=" col-4 col-sm-4"></div>
+            <div class="col-2 col-sm-4">
+              <%= form.fields_for :device_post_tests do |builder| %>
+                  <%= render 'device_post_test', form: builder %>
+              <% end %>
+          <%= link_to_add_row('Add Repair Post-Test', form, :device_post_tests, class: 'btn btn-outline') %>
+
+          </div>
+          </div>
+        </div>
+          </div>
+          </div>
+
+</div>
+</div><br />
+
+<%= form.fields_for :repair_order_items do |builder| %>
+    <%= render 'repair_order_item', form: builder %>
+<% end %>
+      <div class="col">
+  <%= link_to_add_row('Add Repair Item', form, :repair_order_items, class: 'btn btn-outline btn-block' ) %>
+        <div class="col"></div>
+      </div>
+
+  </div>
+</div>
+  </fieldset><br />

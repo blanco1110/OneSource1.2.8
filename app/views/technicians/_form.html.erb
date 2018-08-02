@@ -17,16 +17,18 @@
   </div>
 
   <div class="field">
-    <%= form.label :technician_status_id %>
+    <%= form.label :technician_status_id, 'Status' %>
     <%= form.collection_select :technician_status_id, TechnicianStatus.all, :id, :tech_status %>
   </div>
 
   <div class="field">
-    <%= form.label :tech_expertise_notes %>
-    <%= form.text_field :tech_expertise_notes, id: :technician_tech_expertise_notes %>
+    <%= form.label :tech_expertise_notes, 'Expertise Note' %>
+    <%= form.text_area :tech_expertise_notes, id: :technician_tech_expertise_notes %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+    <div class="col-sm-1 col-xs-1 col-md-1 col-lg-1">
+      <div class="actions">
+       <button type="submit" class="btn btn-outline"> Create Technician</button>
+    </div>
+    </div>
 <% end %>

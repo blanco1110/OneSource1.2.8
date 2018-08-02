@@ -3,8 +3,8 @@ class Customer < ApplicationRecord
   accepts_nested_attributes_for :repair_orders
   validates :customer_fname, presence: true
   validates :customer_lname, presence: true
-  validates :customer_email, presence: true
-  validates :customer_zip, presence: true
+  validates :customer_phone, presence: true
+
 
 
   def self.search(search)

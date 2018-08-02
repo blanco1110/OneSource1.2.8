@@ -1,8 +1,8 @@
+
 <%= form_with(model: repair_order, local: true) do |form| %>
   <% if repair_order.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(repair_order.errors.count, "error") %> prohibited this repair_order from being saved:</h2>
-
       <ul>
       <% repair_order.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -10,48 +10,70 @@
       </ul>
     </div>
   <% end %>
+<div class="container">
+    <div class="field">
+      <%= form.label :customer_id, "Existing Customer ID" %>
+      <%= form.text_field :customer_id, id: :repair_order_customer_id %>
+    </div>
 
-  <div class="field">
-    <%= form.label :repair_order_status_id %>
-    <%= form.collection_select :repair_order_status_id, RepairOrderStatus.all, :id, :repair_order_status %>
-  </div>
+    <%= form.fields_for :customer do |builder| %>
+        <%= render 'customer', form: builder %>
+    <% end %>
+</div>
+<div class="jumbotron" >
+    <div class="container">
+      <div class="tro">
+          <div class="row justify-content-start">
+            <div class="col-3">
+            <%= form.label :repair_order_date, "Repair Order Date" %>
+             <%= form.label :repair_order_subtotal, "Subtotal" %>
+              <%= form.label :repair_order_tax, "Tax" %>
+              <%= form.label :repair_order_total, "Total" %>
 
-  <div class="field">
-    <%= form.label :repair_order_date %>
-    <%= form.date_select :repair_order_date, id: :repair_order_repair_order_date %>
-  </div>
 
-  <div class="field">
-    <%= form.label :repair_order_subtotal %>
-    <%= form.text_field :repair_order_subtotal, id: :repair_order_repair_order_subtotal %>
-  </div>
+          </div>
+      <div class="col-4">
+        <%= form.date_select :repair_order_date, id: :repair_order_repair_order_date, :disabled => true%>
+        <%= form.text_field :repair_order_subtotal, id: :repair_order_repair_order_subtotal, :disabled => true%>
+        <%= form.text_field :repair_order_tax, id: :repair_order_repair_order_tax, :disabled => true%>
+            <%= form.text_field :repair_order_total, id: :repair_order_repair_order_total, :disabled => true%>
 
-  <div class="field">
-    <%= form.label :repair_order_tax %>
-    <%= form.text_field :repair_order_tax, id: :repair_order_repair_order_tax %>
-  </div>
+          </div>
+          </div>
+            <div class="container-fluid">
+              <div class="row justify-content-start">
+            <div class="col-3">
+              <%= form.label :repair_order_status_id, "Repair Order Status" %>
+              <%= form.label :repair_order_status_date, "Date" %>
+          </div>
 
-  <div class="field">
-    <%= form.label :repair_order_total %>
-    <%= form.text_field :repair_order_total, id: :repair_order_repair_order_total %>
-  </div>
+            <div class="col-4">
 
-  <div class="field">
-    <%= form.label :repair_order_accessories %>
-    <%= form.text_field :repair_order_accessories, id: :repair_order_repair_order_accessories %>
-  </div>
+              <%= form.collection_select :repair_order_status_id, RepairOrderStatus.all, :id, :repair_order_status %>
+              <br>
+              <%= form.date_select :repair_order_status_date, id: :repair_order_repair_order_status_date, :disabled => true%>
+          </div>
 
-  <div class="field">
-    <%= form.label :repair_order_notes %>
-    <%= form.text_field :repair_order_notes, id: :repair_order_repair_order_notes %>
-  </div>
+<div class="row">
+<div class="col">
+            <%= form.label :repair_order_accessories, "Accessories" %>
+            <%= form.text_area :repair_order_accessories, id: :repair_order_repair_order_accessories, size:"50%x3" %>
+</div>
 
-  <div class="field">
-    <%= form.label :repair_order_status_date %>
-    <%= form.date_select :repair_order_status_date, id: :repair_order_repair_order_status_date %>
-  </div>
+      <div class="col">
+        <%= form.label :repair_order_notes, "Notes" %>
+        <%= form.text_area :repair_order_notes, id: :repair_order_repair_order_notes, size:"50%x3" %>
+      </div>
+    </div>
+          </div></div></div><br />
+    <%= form.fields_for :devices do |builder| %>
+        <%= render 'device', form: builder %>
+    <% end %>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+    <%= link_to_add_row('Add Device', form, :devices, class: 'btn btn-outline btn-block') %><br />
+
+    <div class="actions">
+      <button type="submit" class="btn btn-outline btl-lg btn-block"> Complete The Repair Order</button>
+    </div>
 <% end %>
+</div></div>

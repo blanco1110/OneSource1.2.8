@@ -1,38 +1,42 @@
-<fieldset>
-  <table>
-    <tr>
-      <td>
-        <div class="field">
-          <%= form.label :imei_number %>
-          <%= form.number_field :imei_number, id: :device_imei_number %>
-        </div>
-      </td>
-      <td>
-        <div class="field">
-          <%= form.label :device_version_id %>
-          <%= form.collection_select :device_version_id, DeviceVersion.all, :id, :device_version_name %>
-        </div>
-      </td>
-      <td>
-        <div class="field">
-          <%= form.label :device_type %>
-          <%= form.text_field :device_type, id: :device_device_type %>
-        </div>
-      </td>
-      <td>
-        <div class="field">
-          <%= form.label :device_color %>
-          <%= form.text_field :device_color, id: :device_device_color %>
-        </div>
-      </td>
-      <td>
-        <div class="field">
-          <%= form.label :device_notes %>
-          <%= form.text_field :device_notes, id: :device_device_notes %>
-        </div>
-      </td>
-    </tr>
-  </table>
+<div class="card" style="background-color: #17c63723">
+  <div class="card-body">
+    <fieldset>
+      <table>
+        <tr>
+          <td>
+            <div class="field">
+              <%= form.label :imei_number, "IMEI Number" %>
+              <%= form.number_field :imei_number, id: :device_imei_number %>
+            </div>
+          </td>
+          <td>
+            <div class="field">
+              <%= form.label :device_version_id, "Device Version" %>
+              <%= form.collection_select :device_version_id, DeviceVersion.all, :id, :device_version_name %>
+            </div>
+          </td>
+          <td>
+            <div class="field">
+              <%= form.label :device_type, "Device Type" %>
+              <%= form.text_field :device_type, id: :device_device_type %>
+            </div>
+          </td>
+          <td>
+            <div class="field">
+              <%= form.label :device_color, "Color" %>
+              <%= form.text_field :device_color, id: :device_device_color %>
+            </div>
+          </td>
+          <td>
+            <div class="field">
+              <%= form.label :device_notes, "Notes" %>
+              <%= form.text_area :device_notes, id: :device_device_notes, size:"39x2" %>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <div class="card" style="border-color: #222629; background-color: #fff">
+        <div class="card-body">
 
   <table>
     <tr>
@@ -42,9 +46,12 @@
   <% end %>
 
     </tr>
+
   </table>
 
-  <%= link_to_add_row('Add Repair Pre-Test', form, :device_pre_tests, class: 'btn btn-primary') %>
+  <%= link_to_add_row('Add Repair Pre-Test', form, :device_pre_tests, class: 'btn btn-outline') %>
+
+<!---test 2-->
 
   <table>
     <tr>
@@ -56,11 +63,19 @@
     </tr>
   </table>
 
-  <%= link_to_add_row('Add Repair Post-Test', form, :device_post_tests, class: 'btn btn-primary') %>
+  <%= link_to_add_row('Add Repair Post-Test', form, :device_post_tests, class: 'btn btn-outline') %>
 
+
+</div>
+</div>
 
 <%= form.fields_for :repair_order_items do |builder| %>
     <%= render 'repair_order_item', form: builder %>
 <% end %>
-  <%= link_to_add_row('Add Repair Item', form, :repair_order_items, class: 'btn btn-primary') %>
+      <div class="col">
+  <%= link_to_add_row('Add Repair Item', form, :repair_order_items, class: 'btn btn-outline btn-block') %>
+        <div class="col"></div>
+      </div>
 </fieldset>
+  </div>
+</div>

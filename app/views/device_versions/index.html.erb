@@ -1,12 +1,11 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Device Versions</h1>
-
-<table>
+<div class="container">
+<h1>Versions</h1>
+  <table class="table table-hover table-responsive">
   <thead>
     <tr>
-      <th>Device version name</th>
-      <th>Device manufacturer</th>
+      <th>Name</th>
+      <th>Manufacturer</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -26,4 +25,9 @@
 
 <br>
 
-<%= link_to 'New Device Version', new_device_version_path %>
+    <div class="col-sm-1 col-xs-1 col-md-1 col-lg-1">
+      <a class="btn btn-outline" href="device_versions/new">New Device Version</a>
+    </div>
+
+
+</div>

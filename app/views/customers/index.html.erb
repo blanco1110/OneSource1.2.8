@@ -1,16 +1,20 @@
 <p id="notice"><%= notice %></p>
-
+<div class="container">
 <h1>Customers</h1>
-
+  <button type="button" class="tooltipback" data-toggle="tooltip"
+          data-placement="left" title="Enter The Phone Number">
 <%= form_tag customers_path, :method => 'get', :id => "customers_search" do %>
     <p>
       <%= text_field_tag :search, params[:search] %>
       <%= submit_tag "Search", :name => nil %>
-    </p>
+          </p>
 <% end %>
+  </button>
 
 <div id="customers"><%= render 'customers' %></div>
 
 <br>
-
-<%= link_to 'New Customer', new_customer_path %>
+<div class="col-sm-1 col-xs-1 col-md-1 col-lg-1">
+  <a class="btn btn-outline" href="/customers/new">New Customer</a>
+</div>
+</div>

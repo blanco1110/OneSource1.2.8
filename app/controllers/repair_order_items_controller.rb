@@ -69,6 +69,6 @@ class RepairOrderItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def repair_order_item_params
-      params.require(:repair_order_item).permit(:device_component_id, :technician_id, :warranty_expire_date, :warranty_coverage_notes, :repaired_as_warranty, :warranty_repair_date, :price, :device_id)
+      params.require(:repair_order_item).permit(:repair_order_status_id, :device_component_id, :technician_id, :warranty_expire_date, :warranty_coverage_notes, :repaired_as_warranty, :warranty_repair_date, :price, :device_id)
     end
 end

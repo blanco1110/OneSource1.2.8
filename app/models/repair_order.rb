@@ -2,7 +2,9 @@ class RepairOrder < ApplicationRecord
   belongs_to :repair_order_status
   belongs_to :customer
   has_many :devices
-  accepts_nested_attributes_for :devices
+  accepts_nested_attributes_for :devices, allow_destroy: true
+  accepts_nested_attributes_for :customer,
+                                reject_if: lambda {|attributes| attributes["customer_fname"].blank?}
   before_update :update_status_date
   after_save :total_calculation
 
@@ -19,5 +21,15 @@ class RepairOrder < ApplicationRecord
 
     update_columns(repair_order_subtotal: sub, repair_order_total: total, repair_order_tax: taxtot)
   end
+
+  def self.search(search)
+    if search
+      RepairOrder.joins(:customer).where("customers.customer_phone ILIKE ?", "%#{search}%")
+    else
+      where(nil)
+    end
+  end
+
+  
 
 end

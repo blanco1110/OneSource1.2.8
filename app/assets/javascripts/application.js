@@ -13,17 +13,18 @@
 //= require jquery3
 //= require jquery_ujs
 //= require turbolinks
+//= require bootstrap-sprockets
 //= require_tree .
 //= require Chart.bundle
 //= require chartkick
 
+
 $(document).on('turbolinks:load', function() {
 
-    $('form').on('click', '.remove_fields', function(event) {
+    $('form').on('click', '.remove_record', function(event) {
         $(this).prev('input[type=hidden]').val('1');
         $(this).closest('fieldset').hide();
         return event.preventDefault();
-
     });
 
     $('form').on('click', '.add_fields', function(event) {
@@ -38,5 +39,14 @@ $(document).on('turbolinks:load', function() {
         return false;
     });
 
+    $("#repairs_search input").keyup(function() {
+        $.get($("#repairs_search").attr("action"), $("#repairs_search").serialize(), null, "script");
+        return false;
+    });
+
 });
 
+
+$(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});

@@ -1,14 +1,100 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>OneSourcePrototype128</title>
     <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!---- bootstrap css. online version--->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <!-- Custom styles --->
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track'=> 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track'=> 'reload' %>
   </head>
 
+  <header>
+    <!--navigation bar for entire application-->
+    <nav class="navbar navbar-expand-sm">
+      <div class="container" style="padding-left: 0;">
+        <!-- text to right-->
+        <!-- logo image-->
+        <div class="navbar-header" style="font-size: large">
+          <a class="navbar-brand" href='/'>
+            <%= image_tag("/assets/logo.png", size: "90x50") %>
+            <span class="navbar-brand" font href="/">Baytown iPhone Repair</span>
+          </a>
+        </div>
+        <!-- Links -->
+        <!-- New Order -->
+        <ul class="navbar-nav" style="font-size: large">
+          <li class="nav-item ">
+            <a class="nav-link" href="/repair_orders/new" style="text-align: center">New <br> Order</a>
+          </li>
+
+
+        <ul class="navbar-nav" style="font-size: large">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <%= image_tag("/assets/list32.png", size: "32x32") %>
+              Views
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/devices">Devices</a>
+              <a class="dropdown-item" href="/repair_orders">Orders</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="/customers">
+                Customers
+                <%= image_tag("/assets/person16.png", size: "16x16") %>
+              </a>
+            </div>
+          </li>
+<!--Reports --->
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <%= image_tag("/assets/report32.png", size: "32x32") %>
+            Reports
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Repair Order Report</a>
+            <a class="dropdown-item" href="#">Warranty Report</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Dead Links Above</a>
+          </div>
+
+<!---Admin---->
+        </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <%= image_tag("https://i.imgur.com/UKHbfrs.png", size: "32x32") %>
+              Admin
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/device_component_statuses">Device Comp Status</a>
+              <a class="dropdown-item" href="/repair_order_statuses">Repair Ord Stat</a>
+              <a class="dropdown-item" href="/technician_statuses">Tech Stat</a>
+              <a class="dropdown-item" href="/tests">Tests</a>
+              <a class="dropdown-item" href="/device_versions">Versions</a>
+              <a class="dropdown-item" href="/device_manufacturers">Manufacturers</a>
+              <a class="dropdown-item" href="/device_components">Components</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="/technicians">
+                Technicians
+                <%= image_tag("/assets/person16.png", size: "16x16") %>
+              </a>
+            </div>
+          </li>
+        </ul>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
   <body>
-    <%= yield %>
+        <%= yield %>
   </body>
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
 </html>

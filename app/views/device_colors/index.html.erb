@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Device Colors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Color name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @device_colors.each do |device_color| %>
+      <tr>
+        <td><%= device_color.color_name %></td>
+        <td><%= link_to 'Show', device_color %></td>
+        <td><%= link_to 'Edit', edit_device_color_path(device_color) %></td>
+        <td><%= link_to 'Destroy', device_color, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Device Color', new_device_color_path %>

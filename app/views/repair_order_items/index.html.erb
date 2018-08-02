@@ -1,16 +1,15 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Repair Order Items</h1>
-
-<table>
+<div class="container">
+<h1>Items in Repair Orders</h1>
+  <table class="table table-hover table-responsive">
   <thead>
     <tr>
-      <th>Device component</th>
+      <th>Component</th>
       <th>Technician</th>
-      <th>Warranty expire date</th>
-      <th>Warranty coverage notes</th>
-      <th>Repaired as warranty</th>
-      <th>Warranty repair date</th>
+      <th>Warranty Expiration Date</th>
+      <th>Warranty Coverage Notes</th>
+      <th>Repaired as Warranty</th>
+      <th>Warranty Repair Date</th>
       <th>Device</th>
       <th colspan="3"></th>
     </tr>
@@ -36,4 +35,7 @@
 
 <br>
 
-<%= link_to 'New Repair Order Item', new_repair_order_item_path %>
+  <div class="col-sm-1 col-xs-1 col-md-1 col-lg-1">
+    <a class="btn btn-outline" href="repair_order_items/new">New Repair Order Item</a>
+  </div>
+</div>
