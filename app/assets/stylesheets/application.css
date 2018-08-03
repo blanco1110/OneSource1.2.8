@@ -180,4 +180,13 @@
 .tooltipback{
     background-color: transparent;
     border: transparent;
+    margin-bottom: 0;
+}
+.repairorderreport{
+    padding: 3%;
+    padding-top: 0;
+}
+
+.screen{
+    color:pink;
 }
