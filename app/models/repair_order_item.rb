@@ -14,7 +14,7 @@ class RepairOrderItem < ApplicationRecord
   end
 
   def update_w_date
-    self.warranty_expire_date = Date.today + 90 if repair_order_status_id == 3 # maybe better Time.now?
+    self.warranty_expire_date = Date.today + 90 if repair_order_status_id == 6 # maybe better Time.now?
   end
 
   def update_wrepair_date
