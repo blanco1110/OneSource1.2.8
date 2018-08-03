@@ -3,7 +3,8 @@ class Customer < ApplicationRecord
   accepts_nested_attributes_for :repair_orders
   validates :customer_fname, presence: true
   validates :customer_lname, presence: true
-  validates :customer_phone, presence: true
+  validates :customer_phone, length: {minimum: 10, maximum: 10}, presence: true
+  validates :customer_zip, length: {minimum: 5, maximum: 5}
 
 
 
@@ -13,6 +14,14 @@ class Customer < ApplicationRecord
     else
       where(nil)
     end
+  end
+
+  def something_yn
+    customer_call   ? 'Yes' : 'No'
+  end
+
+  def something_yn2
+    customer_text   ? 'Yes' : 'No'
   end
 
 
