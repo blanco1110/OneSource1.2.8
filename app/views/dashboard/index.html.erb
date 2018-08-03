@@ -16,8 +16,8 @@
 <div class="row">
 
 <!-- awaiting parts -->
-  <div class="col>">
-    <div class="container>">
+  <div class="coll">
+    <div class="container">
 <button type="button" class="btn btn-dash">
   Awaiting Parts <span class="badge badge-light"><%=  @count_awaiting_orders%></span>
   <span class="sr-only"></span>
@@ -26,7 +26,7 @@
   </div>
 
 <!--pending orders-->
-  <div class="col>">
+  <div class="coll">
     <div class="container">
   <button type="button" class="btn btn-dash">
     Pending Orders <span class="badge badge-light"><%=@count_pending_orders%></span>
@@ -36,7 +36,7 @@
 </div>
 
 <!--active-->
-  <div class="col>">
+  <div class="coll">
     <div class="container">
   <button type="button" class="btn btn-dash">
     Active Orders <span class="badge badge-light"> <%=@count_open_orders%></span>
@@ -46,7 +46,7 @@
 </div>
 
 <!--on hold-->
-  <div class="col>">
+  <div class="coll">
 <div class="container">
   <button type="button" class="btn btn-dash">
     Orders On Hold <span class="badge badge-light"><%=@count_hold_orders%></span>
@@ -55,7 +55,7 @@
 </div>
 </div>
 <!--completed-->
-  <div class="col>">
+  <div class="coll">
 <div class="container">
   <button type="button" class="btn btn-dash">
     Completed Orders <span class="badge badge-light"><%=@count_completed_order%></span>
@@ -72,10 +72,10 @@
 <!---Completed Orders  ----->
   <div class="container">
   <div class="align-self-center">
-  <h2>Completed Orders</h2>
+  <h3 align="center">Completed Orders</h3>
 </div>
     <div class="align-self-center">
-  <table>
+  <table align="center">
     <thead>
     <tr>
       <th>Customer First Name</th>

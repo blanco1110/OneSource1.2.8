@@ -36,11 +36,11 @@
         <%= form.date_select :repair_order_date, id: :repair_order_repair_order_date, :disabled => true%>
         <%= form.text_field :repair_order_subtotal, id: :repair_order_repair_order_subtotal, :disabled => true%>
         <%= form.text_field :repair_order_tax, id: :repair_order_repair_order_tax, :disabled => true%>
-            <%= form.text_field :repair_order_total, id: :repair_order_repair_order_total, :disabled => true%>
+        <%= form.text_field :repair_order_total, id: :repair_order_repair_order_total, :disabled => true%>
 
           </div>
           </div>
-            <div class="container-fluid">
+
               <div class="row justify-content-start">
             <div class="col-3">
               <%= form.label :repair_order_status_id, "Repair Order Status" %>
@@ -53,19 +53,22 @@
               <br>
               <%= form.date_select :repair_order_status_date, id: :repair_order_repair_order_status_date, :disabled => true%>
           </div>
-
+                <div class="container">
 <div class="row">
+
 <div class="col">
+
             <%= form.label :repair_order_accessories, "Accessories" %>
-            <%= form.text_area :repair_order_accessories, id: :repair_order_repair_order_accessories, size:"50%x3" %>
+            <%= form.text_area :repair_order_accessories, id: :repair_order_repair_order_accessories, size:"47%x3" %>
 </div>
 
       <div class="col">
         <%= form.label :repair_order_notes, "Notes" %>
-        <%= form.text_area :repair_order_notes, id: :repair_order_repair_order_notes, size:"50%x3" %>
+        <%= form.text_area :repair_order_notes, id: :repair_order_repair_order_notes, size:"47%x3" %>
       </div>
+  </div>
     </div>
-          </div></div></div><br />
+          </div></div><br />
     <%= form.fields_for :devices do |builder| %>
         <%= render 'device', form: builder %>
     <% end %>
