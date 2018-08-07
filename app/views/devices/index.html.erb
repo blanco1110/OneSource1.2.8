@@ -21,9 +21,7 @@
         <td><%= device.device_color.color_name %></td>
         <td><%= device.device_notes %></td>
         <td><%= device.repair_order.repair_order_status_id %></td>
-        <td><%= link_to 'Show', device %></td>
-        <td><%= link_to 'Edit', edit_device_path(device) %></td>
-        <td><%= link_to 'Destroy', device, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'View', edit_device_path(device) %></td>
       </tr>
     <% end %>
   </tbody>

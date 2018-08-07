@@ -17,8 +17,7 @@
         <td><%= technician.tech_name %></td>
         <td><%= technician.technician_status.tech_status %></td>
         <td><%= technician.tech_expertise_notes %></td>
-        <td><%= link_to 'Show', technician %></td>
-        <td><%= link_to 'Edit', edit_technician_path(technician) %></td>
+        <td><%= link_to 'View', edit_technician_path(technician) %></td>
       </tr>
     <% end %>
   </tbody>

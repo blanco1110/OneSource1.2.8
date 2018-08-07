@@ -13,8 +13,7 @@
     <% @device_component_statuses.each do |device_component_status| %>
       <tr>
         <td><%= device_component_status.device_comp_status %></td>
-        <td><%= link_to 'Show', device_component_status %></td>
-        <td><%= link_to 'Edit', edit_device_component_status_path(device_component_status) %></td>
+        <td><%= link_to 'View', edit_device_component_status_path(device_component_status) %></td>
 
       </tr>
     <% end %>

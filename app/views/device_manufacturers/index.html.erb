@@ -13,8 +13,7 @@
     <% @device_manufacturers.each do |device_manufacturer| %>
       <tr>
         <td><%= device_manufacturer.device_manu_name %></td>
-        <td><%= link_to 'Show', device_manufacturer %></td>
-        <td><%= link_to 'Edit', edit_device_manufacturer_path(device_manufacturer) %></td>
+        <td><%= link_to 'View', edit_device_manufacturer_path(device_manufacturer) %></td>
 
       </tr>
     <% end %>

@@ -14,8 +14,7 @@
     <% @device_colors.each do |device_color| %>
       <tr>
         <td><%= device_color.color_name %></td>
-        <td><%= link_to 'Show', device_color %></td>
-        <td><%= link_to 'Edit', edit_device_color_path(device_color) %></td>
+        <td><%= link_to 'View', edit_device_color_path(device_color) %></td>
       </tr>
     <% end %>
   </tbody>

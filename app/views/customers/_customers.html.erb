@@ -24,9 +24,7 @@
         <td><%= customer.something_yn %></td>
         <td><%= customer.something_yn2 %></td>
         <td><%= customer.customer_zip %></td>
-        <td><%= link_to 'Show', customer %></td>
-        <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
-        <td><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'The customer may not be removed as it is associated with a repair order. Close window?' } %></td>
+        <td><%= link_to 'View', edit_customer_path(customer) %></td>
       </tr>
   <% end %>
   </tbody>

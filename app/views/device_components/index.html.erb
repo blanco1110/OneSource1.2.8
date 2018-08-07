@@ -23,8 +23,7 @@
         <td><%= device_component.device_comp_description %></td>
         <td><%= device_component.device_component_status.device_comp_status %></td>
         <td><%= number_to_currency(device_component.device_comp_cost) %></td>
-        <td><%= link_to 'Show', device_component %></td>
-        <td><%= link_to 'Edit', edit_device_component_path(device_component) %></td>
+        <td><%= link_to 'View', edit_device_component_path(device_component) %></td>
         </tr>
     <% end %>
   </tbody>
