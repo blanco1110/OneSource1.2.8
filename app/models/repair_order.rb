@@ -6,7 +6,7 @@ class RepairOrder < ApplicationRecord
   accepts_nested_attributes_for :customer,
                                 reject_if: lambda {|attributes| attributes["customer_fname"].blank?}
   before_save :update_status_date
-  before_save :update_date
+  before_create :update_date
   after_save :total_calculation
 
   def update_status_date
