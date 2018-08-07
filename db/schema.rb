@@ -137,6 +137,7 @@ ActiveRecord::Schema.define(version: 20180802222214) do
     t.datetime "updated_at", null: false
     t.index ["customer_id"], name: "index_repair_orders_on_customer_id"
     t.index ["repair_order_status_id"], name: "index_repair_orders_on_repair_order_status_id"
+    add_foreign_key :identitities, customers, on_delete: :cascade
   end
 
   create_table "technician_statuses", force: :cascade do |t|

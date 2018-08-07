@@ -18,49 +18,49 @@
 <!-- awaiting parts -->
   <div class="coll">
     <div class="container">
-<button type="button" class="btn btn-dash">
-  Awaiting Parts <span class="badge badge-light"><%=  @count_awaiting_orders%></span>
+<a href="/awaiting_parts_report" class="btn btn-dash align-content-center" role="button" aria-pressed="true">
+  Awaiting Parts <span class="badge badge-light "><%=  @count_awaiting_orders%></span>
   <span class="sr-only"></span>
-</button>
+</a>
 </div>
   </div>
 
 <!--pending orders-->
   <div class="coll">
     <div class="container">
-  <button type="button" class="btn btn-dash">
-    Pending Orders <span class="badge badge-light"><%=@count_pending_orders%></span>
+      <a href="/not_started_order_report" class="btn btn-dash align-content-center" role="button" aria-pressed="true">
+    Orders Not Started <span class="badge badge-light"><%=@count_pending_orders%></span>
     <span class="sr-only"></span>
-  </button>
+  </a>
     </div>
 </div>
 
 <!--active-->
   <div class="coll">
     <div class="container">
-  <button type="button" class="btn btn-dash">
-    Active Orders <span class="badge badge-light"> <%=@count_open_orders%></span>
+      <a href="/open_order_report" class="btn btn-dash align-content-center" role="button" aria-pressed="true">
+    Open Orders <span class="badge badge-light"> <%=@count_open_orders%></span>
     <span class="sr-only"></span>
-  </button>
+  </a>
     </div>
 </div>
 
 <!--on hold-->
   <div class="coll">
 <div class="container">
-  <button type="button" class="btn btn-dash">
+  <a href="/on_hold_order_report" class="btn btn-dash align-content-center" role="button" aria-pressed="true">
     Orders On Hold <span class="badge badge-light"><%=@count_hold_orders%></span>
     <span class="sr-only"></span>
-  </button>
+  </a>
 </div>
 </div>
 <!--completed-->
   <div class="coll">
 <div class="container">
-  <button type="button" class="btn btn-dash">
+  <a href="/completed_order_report" class="btn btn-dash align-content-center" role="button" aria-pressed="true">
     Completed Orders <span class="badge badge-light"><%=@count_completed_order%></span>
     <span class="sr-only"></span>
-  </button>
+  </a>
 </div>
     </div>
 

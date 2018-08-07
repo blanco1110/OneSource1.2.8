@@ -190,6 +190,20 @@
 .btn-dash{
     background-color: #17c63794;
     color: #fff;
-    height: 100px;
-    width: 190px;
+    height: 110px;
+    width: 194px;
+    text-align: center;
+
+}
+.coll a{
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+    padding-top: 20%;
+
+
+}
+badge
+{
+    
 }
