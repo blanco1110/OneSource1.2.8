@@ -14,4 +14,13 @@ class Device < ApplicationRecord
 
   validates :imei_number, length: {minimum: 15}, presence: true
   validates :device_color, presence: true
+
+  def self.search(search)
+    if search
+      where('imei_number = ?', "#{search}")
+    else
+      where(nil)
+    end
+    end
+
 end

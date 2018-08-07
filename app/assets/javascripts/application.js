@@ -44,6 +44,20 @@ $(document).on('turbolinks:load', function() {
         return false;
     });
 
+    $("#devices_search input").keyup(function() {
+        $.get($("#devices_search").attr("action"), $("#devices_search").serialize(), null, "script");
+        return false;
+    });
+
+    $('#devices_search').submit(function () {
+        $(this)
+            .find('input[name]')
+            .filter(function () {
+                return !this.value;
+            })
+            .prop('name', '');
+    });
+
 });
 
 

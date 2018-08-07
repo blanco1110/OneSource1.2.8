@@ -1,31 +1,16 @@
 <p id="notice"><%= notice %></p>
 <div class="container">
 <h1>Devices</h1>
-  <table class="table table-hover table-responsive">
-  <thead>
-    <tr>
-      <th>IMEI Number</th>
-      <th>Version</th>
-      <th>Color</th>
-      <th>Notes</th>
-      <th>Repair Order</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @devices.each do |device| %>
-      <tr>
-        <td><%= device.imei_number %></td>
-        <td><%= device.device_version.device_version_name %></td>
-        <td><%= device.device_color.color_name %></td>
-        <td><%= device.device_notes %></td>
-        <td><%= device.repair_order.repair_order_status_id %></td>
-        <td><%= link_to 'View', edit_device_path(device) %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+  <%= form_tag devices_path, :method => 'get', :id => "devices_search" do %>
+      <p>
+        <%= text_field_tag :search, params[:search] %>
+        <%= submit_tag "Search", :name => nil %>
+      </p>
+  <% end %>
+  <div id="devices"><%= render 'devices' %></div>
+
+
 
 <br>
   <div class="col-sm-1 col-xs-1 col-md-1 col-lg-1">
