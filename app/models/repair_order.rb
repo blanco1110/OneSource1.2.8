@@ -5,11 +5,16 @@ class RepairOrder < ApplicationRecord
   accepts_nested_attributes_for :devices, allow_destroy: true
   accepts_nested_attributes_for :customer,
                                 reject_if: lambda {|attributes| attributes["customer_fname"].blank?}
-  before_update :update_status_date
+  before_save :update_status_date
+  before_save :update_date
   after_save :total_calculation
 
   def update_status_date
     self.repair_order_status_date = Date.today if repair_order_status_id_changed? # maybe better Time.now?
+  end
+
+  def update_date
+    self.repair_order_date = Date.today
   end
 
   def total_calculation

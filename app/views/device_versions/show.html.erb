@@ -7,7 +7,7 @@
 
 <p>
   <strong>Manufacturer:</strong>
-  <%= @device_version.device_manufacturer %>
+  <%= @device_version.device_manufacturer.device_manu_name %>
 </p>
 
 <%= link_to 'Edit', edit_device_version_path(@device_version) %> |

@@ -2,15 +2,14 @@
   <thead>
   <tr>
     <th>Status</th>
-    <th>Date</th>
+    <th  width = '103px'>Date</th>
     <th>Subtotal</th>
     <th>Tax</th>
     <th>Total</th>
     <th>Accessories</th>
-    <th>Notes</th>
     <th>Customer</th>
     <th>Customer Phone #</th>
-    <th>Date of Status Change </th>
+    <th >Status Change Date</th>
     <th colspan="3"></th>
   </tr>
   </thead>
@@ -24,13 +23,10 @@
         <td><%= number_to_currency(repair_order.repair_order_tax) %></td>
         <td><%= number_to_currency(repair_order.repair_order_total) %></td>
         <td><%= repair_order.repair_order_accessories %></td>
-        <td><%= repair_order.repair_order_notes %></td>
         <td><%= repair_order.customer.customer_fname%></td>
         <td><%= number_to_phone(repair_order.customer.customer_phone)%></td>
         <td><%= repair_order.repair_order_status_date %></td>
-        <td><%= link_to 'Show', repair_order %></td>
-        <td><%= link_to 'Edit', edit_repair_order_path(repair_order) %></td>
-        <td><%= link_to 'Destroy', repair_order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'View', edit_repair_order_path(repair_order) %></td>
       </tr>
   <% end %>
   </tbody>

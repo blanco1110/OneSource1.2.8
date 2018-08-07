@@ -7,17 +7,14 @@
 
 <p>
   <strong>Version:</strong>
-  <%= @device.device_version %>
+  <%= @device.device_version.device_version_name %>
 </p>
 
-<p>
-  <strong>Type:</strong>
-  <%= @device.device_type %>
-</p>
+
 
 <p>
   <strong>Color:</strong>
-  <%= @device.device_color %>
+  <%= @device.device_color.color_name %>
 </p>
 
 <p>
@@ -27,7 +24,7 @@
 
 <p>
   <strong>Repair Order:</strong>
-  <%= @device.repair_order %>
+  <%= @device.repair_order.id %>
 </p>
 
 <%= link_to 'Edit', edit_device_path(@device) %> |
