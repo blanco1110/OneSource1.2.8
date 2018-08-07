@@ -92,7 +92,7 @@
 
           <td><%= repair_order.customer.customer_fname %></td>
           <td><%= repair_order.customer.customer_lname %></td>
-          <td><%= repair_order.customer.customer_phone %></td>
+          <td><%= number_to_phone(repair_order.customer.customer_phone) %></td>
           <td><%= repair_order.repair_order_notes %></td>
           <td><%= link_to 'View', edit_repair_order_path(repair_order) %></td>
 
