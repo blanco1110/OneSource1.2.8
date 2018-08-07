@@ -7,7 +7,8 @@
         <tr>
            <td>
              <div class="icon">
-               <%= link_to image_tag("https://i.imgur.com/xJea3q2.png"), '#', class: "remove_record" %>
+               <%= form.hidden_field :_destroy, as: :hidden %>
+               <%= link_to image_tag("https://i.imgur.com/xJea3q2.png"), '#', class: 'remove_record' %>
              </div>
            </td>
            <td>
